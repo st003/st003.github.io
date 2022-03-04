@@ -1,24 +1,27 @@
 :root {
     --primary-color: #222222;
+    --secondary-color: #008000;
+    --neutral-color: #EEEEEE;
+    --dark-text: #222222;
     --light-text: white;
 }
 
 body {
     margin: 0;
     font-family: Helvetica;
+    color: var(--dark-text);
 }
 
 header {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     background-color: var(--primary-color);
     color: var(--light-text);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
+header .title {
+    color: var(--light-text);
 }
 
 header .social-media {
@@ -30,5 +33,80 @@ header .social-media a {
     margin-left: 0.5rem;
     font-size: 1.5rem;
     color: var(--light-text);
+}
+
+header .social-media a:hover {
+    color: var(--secondary-color);
+}
+
+header .social-media a:active {
+    opacity: 0.7;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+}
+
+a {
     text-decoration: none;
+}
+
+section {
+    margin: 1rem 1rem 0 1rem;
+    padding: 1.5rem;
+}
+
+.about {
+    background-color: var(--neutral-color);
+}
+
+.about p {
+    font-size: 1.25rem;
+}
+
+.projects {
+    margin-top: 0;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 20rem;
+    height: 15rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--neutral-color);
+    border-radius: 0.25rem;
+}
+
+.project a {
+    display: block;
+    height: 100%;
+}
+
+.project a:hover {
+    opacity: 0.5;
+    background-color: var(--secondary-color);
+}
+
+.project a:active {
+    opacity: 0.7;
+}
+
+.project h3 {
+    padding: 0.75rem;
+    text-align: center;
+    color: var(--dark-text);
 }
