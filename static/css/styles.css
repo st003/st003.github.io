@@ -83,10 +83,10 @@ section {
 }
 
 .project {
-    width: 20rem;
-    height: 15rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    flex-grow: 1;
+    width: 25rem;
+    height: 14rem;
+    margin: 0.25rem;
     border: 2px solid var(--neutral-color);
     border-radius: 0.25rem;
 }
@@ -106,7 +106,34 @@ section {
 }
 
 .project h3 {
-    padding: 0.75rem;
+    padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+    opacity: 0.8;
+    background-color: var(--primary-color);
     text-align: center;
-    color: var(--dark-text);
+    color: var(--light-text);
+}
+
+.slideshow img {
+    width: 100%;
+}
+
+/* PROJECTS */
+#trivia {
+    background-image: url("../img/kt/analytics-01.png");
+    background-size: cover;
+}
+
+#olp {
+    background-image: url("../img/olp/records-03.png");
+    background-size: cover;
+}
+
+#il {
+    background-image: url("../img/il/il-cyber-01.png");
+    background-size: cover;
+}
+
+#arff {
+    background-image: url("../img/arff/arff-index-01.png");
+    background-size: cover;
 }
