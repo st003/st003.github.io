@@ -35,12 +35,12 @@ header .social-media a {
     color: var(--light-text);
 }
 
-header .social-media a:hover {
+header .social-media a:hover, header .title h1:hover {
     color: var(--secondary-color);
 }
 
-header .social-media a:active {
-    opacity: 0.7;
+header .social-media a:active, header .title h1:hover {
+    opacity: 1.0;
 }
 
 h1, h2, h3 {
@@ -113,8 +113,42 @@ section {
     color: var(--light-text);
 }
 
-.slideshow img {
+.slideshow {
+    margin: 1rem;
+}
+
+.slideShowHeader {
+    display: flex;
+    background-color: var(--neutral-color);
+}
+
+.slideShowHeader .middle {
+    flex-grow: 1;
+    align-self: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.slideShowHeader button {
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.slideShowHeader button:hover {
+    background-color: var(--secondary-color);
+}
+
+.slideshowContent .slide {
+    display: none;
+}
+
+img.slide {
     width: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 /* PROJECTS */
@@ -128,12 +162,27 @@ section {
     background-size: cover;
 }
 
+#invnbis {
+    background-image: url("../img/invnbis/reports-01.png");
+    background-size: cover;
+}
+
+#wh {
+    background-image: url("../img/wh/home-01.png");
+    background-size: cover;
+}
+
 #il {
-    background-image: url("../img/il/il-cyber-01.png");
+    background-image: url("../img/il/il-home-01.png");
     background-size: cover;
 }
 
 #arff {
     background-image: url("../img/arff/arff-index-01.png");
+    background-size: cover;
+}
+
+#leo {
+    background-image: url("../img/leo/home-01.png");
     background-size: cover;
 }
