@@ -6,13 +6,16 @@ function incrementSlide(currentSlide, increment) {
 function displaySlide(slideNum) {
     const slideCounter = document.getElementById('slideCounter');
     const slides = document.getElementsByClassName('slide');
+    const captions = document.getElementsByClassName('captionText');
     if (slideNum > slides.length - 1) slideNum = 0;
     if (slideNum < 0) slideNum = slides.length -1;
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
+        captions[i].style.display = 'none';
     }
-    slides[slideNum].style.display = 'inline';
     slideCounter.innerHTML = `${slideNum + 1} / ${slides.length}`;
+    slides[slideNum].style.display = 'inline';
+    captions[slideNum].style.display = 'block';
     return slideNum;
 }
 

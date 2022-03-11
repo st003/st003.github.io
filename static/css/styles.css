@@ -6,6 +6,10 @@
     --light-text: white;
 }
 
+html {
+    font-size: 0.95rem;
+}
+
 body {
     margin: 0;
     font-family: Helvetica;
@@ -61,7 +65,7 @@ a {
 }
 
 section {
-    margin: 1rem 1rem 0 1rem;
+    margin: 1rem;
     padding: 1.5rem;
 }
 
@@ -117,19 +121,19 @@ section {
     margin: 1rem;
 }
 
-.slideShowHeader {
+.slideshowHeader {
     display: flex;
     background-color: var(--neutral-color);
 }
 
-.slideShowHeader .middle {
+.slideshowHeader .middle {
     flex-grow: 1;
     align-self: center;
     font-size: 2rem;
     text-align: center;
 }
 
-.slideShowHeader button {
+.slideshowHeader button {
     padding: 1.5rem;
     background-color: var(--primary-color);
     border: none;
@@ -137,16 +141,29 @@ section {
     color: var(--light-text);
 }
 
-.slideShowHeader button:hover {
+.slideshowHeader button:hover {
     background-color: var(--secondary-color);
+}
+
+.slideshowContent {
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
 .slideshowContent .slide {
     display: none;
 }
 
+.slideshowCaptions {
+    padding: 1rem;
+    background-color: var(--neutral-color);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 img.slide {
-    width: 100%;
+    width: 75%;
+    border: 2px solid var(--primary-color);
     object-fit: cover;
     cursor: pointer;
 }
@@ -185,4 +202,15 @@ img.slide {
 #leo {
     background-image: url("../img/leo/home-01.png");
     background-size: cover;
+}
+
+@media (max-width: 576px) {
+    header {
+        display: block;
+    }
+
+    header .social-media {
+        margin-top: 0.5rem;
+        text-align: left;
+    }
 }
