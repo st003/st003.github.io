@@ -24,10 +24,83 @@
                 </a>
             </div>
         </header>
-        <main>
+        <main class="projectContainer">
             <section class="about">
                 <h2>Admin Tool #1</h2>
+                <p>This is one of multiple in-house customer administrative tools I wrote to alleviate time consuming data-entry and auditing tasks for a single customer. It's a Flask-based web-application backed by a MySQL database. Some of its services include user authentication, customer data storage, automated email notifications, reporting, and notably a data import utility connected to the customer's Learning Management System (LMS) via a RESTful integration. Once core functionality was completed, this tool reduced what once was a series of monthly tasks that took on average 1-2 business days down to under 1 hour.</p>
+                <p>I designed, wrote, deployed, and maintained the entirety of this application. Technology: Python, JavaScript, Flask, Bootstrap, JQuery, Gunicorn, MySQL, Nginx, CentOS. This project is not open source.</p>
             </section>
+            <article class="slideshow">
+                <div class="slideshowCaptions">
+                    <div class="captionText">Log in page to authenticate employees</div>
+                    <div class="captionText">The list of customer accounts are easily search-able</div>
+                    <div class="captionText">Adding new accounts</div>
+                    <div class="captionText">Editing an existing account</div>
+                    <div class="captionText">A simple user import wizard accepts CSVs</div>
+                    <div class="captionText">The importer returns user-by-user import results</div>
+                    <div class="captionText">Graphical reporting provides and overview of categories and billing</div>
+                    <div class="captionText">Setup configs, batch tools, and logs are available from the GUI</div>
+                </div>
+                <div class="slideshowContent">
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/login-01.png" onclick="openModal('modal-1');" alt="login">
+                        <div id="modal-1" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/login-01.png" alt="login">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/accounts-01.png" onclick="openModal('modal-2');" alt="table of accounts">
+                        <div id="modal-2" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/accounts-01.png" alt="table of accounts">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/new-account-01.png" onclick="openModal('modal-3');" alt="new account">
+                        <div id="modal-3" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/new-account-01.png" alt="new account">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/existing-account-01.png" onclick="openModal('modal-4');" alt="existing account">
+                        <div id="modal-4" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/existing-account-01.png" alt="existing account">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/import-users-01.png" onclick="openModal('modal-5');" alt="user import wizard">
+                        <div id="modal-5" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/import-users-01.png" alt="user import wizard">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/import-users-02.png" onclick="openModal('modal-6');" alt="user import results">
+                        <div id="modal-6" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/import-users-02.png" alt="user import results">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/reports-01-crop.png" onclick="openModal('modal-7');" alt="reporting">
+                        <div id="modal-7" class="modal">
+                            <img class="tall modalAnimate" src="../../static/img/invnbis/reports-01.png" alt="reporting">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/invnbis/setup-01.png" onclick="openModal('modal-8');" alt="setup">
+                        <div id="modal-8" class="modal">
+                            <img class="modalAnimate" src="../../static/img/invnbis/setup-01.png" alt="setup">
+                        </div>
+                    </div>
+
+                    <button id="backBtn" class="back">&#10094;</button>
+                    <button id="forwardBtn" class="forward">&#10095;</button>
+                </div>
+                <div id="slideCounter" class="slideshowCounter"></div>
+            </article>
         </main>
+        <footer>
+            <a href="../olp/index.html">&#10094; Previous Project</a>
+            <span></span>
+            <a class="next" href="../flashcards/index.html">Next Project &#10095; </a>
+        </footer>
     </body>
 </html>

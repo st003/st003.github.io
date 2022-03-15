@@ -19,8 +19,13 @@ function displaySlide(slideNum) {
     return slideNum;
 }
 
+function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+
+/* EVENT LISTENERS */
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementsByClassName('slideshow')) {
+    if (document.getElementsByClassName('slideshow').length > 0) {
         let currentSlide = displaySlide(0);
         document.getElementById('backBtn').addEventListener('click', () => {
             currentSlide = incrementSlide(currentSlide, -1);
@@ -28,5 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('forwardBtn').addEventListener('click', () => {
             currentSlide = incrementSlide(currentSlide, 1);
         });
+    }
+
+    if (document.getElementsByClassName('modal').length > 0) {
+        const modals = document.getElementsByClassName('modal');
+        for (let i = 0; i < modals.length; i++) {
+            modals[i].addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        }
     }
 });

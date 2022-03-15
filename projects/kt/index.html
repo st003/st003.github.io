@@ -28,33 +28,9 @@
             <section class="about">
                 <h2>Trivia Application</h2>
                 <p>A multiplayer trivia web-application targeted at providing customizable quick-deployment trivia games for any industry. Informational cards can be interspersed throughout games to provide supplemental fact-based training in addition to the trivia question. Leaderboards and "improve your score" support are designed to increase player engagement through competition. The administrative panel includes detailed analytics from the full game down to the individual question. Production uses include: insurance loss prevention training, automotive customer service, and trade show marketing.</p>
-                <p>I was the project manager, feature designer, UX designer, and QA lead of this application. This project is not open source.</p>
+                <p>I was the project manager, feature designer, UX designer, and QA lead for this application. Technology: JavaScript, Node.js, Express.js, GraphQL, MySQL.This project is not open source.</p>
             </section>
             <article class="slideshow">
-                <div class="slideshowHeader">
-                    <button id="backBtn" class="left">&#10094;</button>
-                    <div id="slideCounter" class="middle"></div>
-                    <button id="forwardBtn" class="right">&#10095;</button>
-                </div>
-                <div class="slideshowContent">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-01.png" alt="trivia start">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-03.png" alt="trivia prize">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-04.png" alt="Question 1">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-09.png" alt="Card 1">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-05.png" alt="Question 2">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-08.png" alt="Card 2">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-06.png" alt="Question 3">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-10.png" alt="Results">
-                    <img class="slide" src="../../static/img/kt/tanning-iq-11.png" alt="leaderboard">
-                    <!-- admin panel -->
-                    <img class="slide" src="../../static/img/kt/analytics-01-crop.png" alt="analytics page">
-                    <img class="slide" src="../../static/img/kt/games-01.png" alt="game page">
-                    <img class="slide" src="../../static/img/kt/questions-01.png" alt="questions page">
-                    <img class="slide" src="../../static/img/kt/questions-02.png" alt="new questions modal">
-                    <img class="slide" src="../../static/img/kt/new-card-01.png" alt="new card page">
-                    <img class="slide" src="../../static/img/kt/edit-card-01.png" alt="edit card page">
-                </div>
-
                 <div class="slideshowCaptions">
                     <div class="captionText">Players register or login with an existing account</div>
                     <div class="captionText">A pre-game information / instructions can be displayed before the player starts</div>
@@ -71,9 +47,111 @@
                     <div class="captionText">Questions can be added manually or imported from a spreadsheet</div>
                     <div class="captionText">Image-based questions are also supported</div>
                     <div class="captionText">Cards can be created from a number of templates providing support for both images and text</div>
-                    <div class="captionText">A WYSIWYG editor allows non-technical administrators to create viually complex cards</div>
+                    <div class="captionText">A WYSIWYG editor allows non-technical administrators to create visually complex cards</div>
                 </div>
+                <div class="slideshowContent">
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-01.png" onclick="openModal('modal-1');" alt="trivia start">
+                        <div id="modal-1" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-01.png" alt="trivia start">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-03.png" onclick="openModal('modal-2');" alt="trivia prize">
+                        <div id="modal-2" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-03.png" alt="rivia prize">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-04.png" onclick="openModal('modal-3');" alt="Question 1">
+                        <div id="modal-3" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-04.png" alt="Question 1">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-09.png" onclick="openModal('modal-4');" alt="Card 1">
+                        <div id="modal-4" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-09.png" alt="Card 1">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-05.png" onclick="openModal('modal-5');" alt="Question 2">
+                        <div id="modal-5" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-05.png" alt="Question 2">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-08.png" onclick="openModal('modal-6');" alt="Card 2">
+                        <div id="modal-6" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-08.png" alt="Card 2">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-06.png" onclick="openModal('modal-7');" alt="Question 3">
+                        <div id="modal-7" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-06.png" alt="Question 3">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-10.png" onclick="openModal('modal-8');" alt="Results">
+                        <div id="modal-8" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-10.png" alt="Results">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/tanning-iq-11.png" onclick="openModal('modal-9');" alt="leaderboard">
+                        <div id="modal-9" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/tanning-iq-11.png" alt="leaderboard">
+                        </div>
+                    </div>
+                    <!-- admin panel -->
+                    <div>
+                        <img class="slide" src="../../static/img/kt/analytics-01-crop.png" onclick="openModal('modal-10');" alt="analytics page">
+                        <div id="modal-10" class="modal">
+                            <img class="tall modalAnimate" src="../../static/img/kt/analytics-01.png" alt="analytics page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/games-01.png" onclick="openModal('modal-11');" alt="game page">
+                        <div id="modal-11" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/games-01.png" alt="game page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/questions-01.png" onclick="openModal('modal-12');" alt="questions page">
+                        <div id="modal-12" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/questions-01.png" alt="questions page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/questions-02.png" onclick="openModal('modal-13');" alt="new questions modal">
+                        <div id="modal-13" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/questions-02.png" alt="new questions modal">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/new-card-01.png" onclick="openModal('modal-14');" alt="new card page">
+                        <div id="modal-14" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/new-card-01.png" alt="new card page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/kt/edit-card-01.png" onclick="openModal('modal-15');" alt="edit card page">
+                        <div id="modal-15" class="modal">
+                            <img class="modalAnimate" src="../../static/img/kt/edit-card-01.png" alt="edit card page">
+                        </div>
+                    </div>
+
+                    <button id="backBtn" class="back">&#10094;</button>
+                    <button id="forwardBtn" class="forward">&#10095;</button>
+                </div>
+                <div id="slideCounter" class="slideshowCounter"></div>
             </article>
         </main>
+        <footer>
+            <a href="../pizza/index.html">&#10094; Previous Project</a>
+            <span></span>
+            <a class="next" href="../olp/index.html">Next Project &#10095; </a>
+        </footer>
     </body>
 </html>
