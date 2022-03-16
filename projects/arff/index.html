@@ -33,7 +33,52 @@
         <main>
             <section class="about">
                 <h2>Website #2</h2>
+                <p>A corporate website running on WordPress. Uses a simple custom WordPress theme and is mobile optimized. The live website can be viewed at <a href="https://www.arffrecurrent.com/" target="_blank">https://www.arffrecurrent.com/</a></p>
+                <h4>My Role</h4>
+                <p>User Interface developer</p>
+                <h4>Technology</h4>
+                <p>HTML, CSS, JavaScript, Bootstrap, PHP, WordPress</p>
+                <h4>Source Code</h4>
+                <p>This project is not open source</p>
             </section>
+            <article class="slideshow">
+                <div class="slideshowCaptions">
+                    <div class="captionText">Home Page</div>
+                    <div class="captionText">Home Page (Phone)</div>
+                    <div class="captionText">Pricing Page</div>
+                    <div class="captionText">Pricing Page (Phone)</div>
+                </div>
+                <div class="slideshowContent">
+                    <div>
+                        <img class="slide" src="../../static/img/arff/arff-index-01-crop.png" onclick="openModal('modal-1');" alt="home page">
+                        <div id="modal-1" class="modal">
+                            <img class="modalAnimate tall" src="../../static/img/arff/arff-index-01.png" alt="home page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/arff/arff-index-02-crop.png" onclick="openModal('modal-2');" alt="home page phone">
+                        <div id="modal-2" class="modal">
+                            <img class="modalAnimate tall" src="../../static/img/arff/arff-index-02.png" alt="home page phone">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/arff/arff-pricing-01-crop.png" onclick="openModal('modal-3');" alt="pricing page">
+                        <div id="modal-3" class="modal">
+                            <img class="modalAnimate tall" src="../../static/img/arff/arff-pricing-01.png" alt="pricing page">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/arff/arff-pricing-02-crop.png" onclick="openModal('modal-4');" alt="pricing page phone">
+                        <div id="modal-4" class="modal">
+                            <img class="modalAnimate tall" src="../../static/img/arff/arff-pricing-02.png" alt="pricing page phone">
+                        </div>
+                    </div>
+
+                    <button id="backBtn" class="back">&#10094;</button>
+                    <button id="forwardBtn" class="forward">&#10095;</button>
+                </div>
+                <div id="slideCounter" class="slideshowCounter"></div>
+            </article>
         </main>
         <footer>
             <a href="../il/index.html">&#10094; Previous Project</a>
