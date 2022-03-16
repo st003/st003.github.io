@@ -9,7 +9,6 @@
 html {
     font-size: 0.95rem;
 }
-
 body {
     margin: 0;
     font-family: Helvetica;
@@ -23,26 +22,21 @@ header {
     background-color: var(--primary-color);
     color: var(--light-text);
 }
-
 header .title {
     color: var(--light-text);
 }
-
 header .social-media {
     flex-grow: 1;
     text-align: right;
 }
-
 header .social-media a {
     margin-left: 0.5rem;
     font-size: 1.5rem;
     color: var(--light-text);
 }
-
 header .social-media a:hover, header .title h1:hover {
     color: var(--secondary-color);
 }
-
 header .social-media a:active, header .title h1:hover {
     opacity: 1.0;
 }
@@ -51,40 +45,34 @@ footer {
     display: flex;
     padding: 1rem
 }
-
 footer a {
     padding: 1rem;
     background-color: var(--secondary-color);
     color: var(--light-text);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
-
 footer span {
+    margin: 0 0.25rem;
     flex-grow: 1;
 }
 
 h1, h2, h3 {
     margin: 0;
 }
-
 h1 {
     font-size: 1.5rem;
 }
-
 h2 {
     margin-bottom: 1rem;
     font-size: 2.25rem;
 }
-
 a {
     text-decoration: none;
 }
-
 section {
     margin: 1rem;
     padding: 1.5rem;
@@ -93,7 +81,6 @@ section {
 .about {
     background-color: var(--neutral-color);
 }
-
 .about p {
     font-size: 1.25rem;
 }
@@ -101,12 +88,10 @@ section {
 .projects {
     margin-top: 0;
 }
-
 .project-container {
     display: flex;
     flex-wrap: wrap;
 }
-
 .project {
     flex-grow: 1;
     width: 25rem;
@@ -115,21 +100,17 @@ section {
     border: 2px solid var(--neutral-color);
     border-radius: 0.25rem;
 }
-
 .project a {
     display: block;
     height: 100%;
 }
-
 .project a:hover {
     opacity: 0.5;
     background-color: var(--secondary-color);
 }
-
 .project a:active {
     opacity: 0.7;
 }
-
 .project h3 {
     padding: 0.75rem 0.75rem 0.25rem 0.75rem;
     opacity: 0.8;
@@ -152,13 +133,11 @@ section {
     font-size: 2rem;
     text-align: center;
 }
-
 .slideshowContent {
     position: relative;
     padding: 1rem 2rem;
     text-align: center;
 }
-
 .slideshow button {
     position: absolute;
     top: 50%;
@@ -170,30 +149,24 @@ section {
     color: var(--light-text);
     font-size: 1.5rem;
 }
-
 .slideshow button.back {
     left: 0;
 }
-
 .slideshow button.forward {
     right: 0;
 }
-
 .slideshow button:hover {
     background-color: var(--secondary-color);
 }
-
 .slideshowContent .slide {
     display: none;
 }
-
 img.slide {
-    width: 75%;
+    max-width: 75%;
     border: 2px solid var(--primary-color);
     object-fit: cover;
     cursor: pointer;
 }
-
 .slideshowCounter {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
@@ -220,12 +193,10 @@ img.slide {
     height: auto;
     border: 2px solid var(--neutral-color);
 }
-
 .modal img.tall {
     max-height: 95%;
     max-width: auto;
 }
-
 .modalAnimate {
     animation: expand 0.3s;
 }
@@ -243,32 +214,26 @@ img.slide {
     background-image: url("../img/kt/analytics-01.png");
     background-size: cover;
 }
-
 #olp {
     background-image: url("../img/olp/records-03.png");
     background-size: cover;
 }
-
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
     background-size: cover;
 }
-
 #wh {
     background-image: url("../img/wh/home-01.png");
     background-size: cover;
 }
-
 #il {
     background-image: url("../img/il/il-home-01.png");
     background-size: cover;
 }
-
 #arff {
     background-image: url("../img/arff/arff-index-01.png");
     background-size: cover;
 }
-
 #leo {
     background-image: url("../img/leo/home-01.png");
     background-size: cover;
@@ -278,12 +243,30 @@ img.slide {
     header {
         display: block;
     }
-
+    .title .titleName, .title .titleJob {
+        display: block;
+    }
+    .title .titleDivider {
+        display: none;
+    }
+    .title .titleJob {
+        font-size: 1.25rem;
+    }
     header .social-media {
         margin-top: 0.5rem;
         text-align: left;
     }
+    header .social-media a {
+        font-size: 2rem;
+    }
+
+    .slideshowCaptions {
+        font-size: 1.5rem;
+    }
+    img.slide {
+        max-width: 70%;
+    }
     .modal img {
-        padding: 1rem;
+        margin: 1rem;
     }
 }
