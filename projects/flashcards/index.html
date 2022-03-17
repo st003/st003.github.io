@@ -30,10 +30,69 @@
                 </a>
             </div>
         </header>
-        <main>
+        <main class="projectContainer">
             <section class="about">
                 <h2>Language Learning Flashcards</h2>
+                <p>A Python Django-based web-application for language learning flashcards in the browser. This is a personal project I built to aid in both my language and programming study. The interface is simple, presenting the english word first, then the non-english version upon demand. The Django admin is used to add new words and topics. Words can be filtered by a combination of topics and categories.</p>
+                <h4>My Role</h4>
+                <p>I designed and developed the entirety of this application</p>
+                <h4>Technology</h4>
+                <p>Python, JavaScript, Django, Vue.js, SQLite</p>
+                <h4>Source Code</h4>
+                <p><a href="https://github.com/st003/flashcards" target="_blank">https://github.com/st003/flashcards</a></p>
             </section>
+            <article class="slideshow">
+                <div class="slideshowCaptions">
+                    <div class="captionText">Getting started page</div>
+                    <div class="captionText">English word first</div>
+                    <div class="captionText">Request the translation on demand</div>
+                    <div class="captionText">Words can be filtered by topic and category</div>
+                    <div class="captionText">The Django admin is used to create new cards and topics</div>
+                    <div class="captionText">Words can belong to multiple topics</div>
+                </div>
+                <div class="slideshowContent">
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/get-started.png" onclick="openModal('modal-1');" alt="get started">
+                        <div id="modal-1" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/get-started.png" alt="get started">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/en.png" onclick="openModal('modal-2');" alt="english word">
+                        <div id="modal-2" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/en.png" alt="english word">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/jp.png" onclick="openModal('modal-3');" alt="translation">
+                        <div id="modal-3" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/jp.png" alt="translation">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/filters.png" onclick="openModal('modal-4');" alt="filters">
+                        <div id="modal-4" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/filters.png" alt="filters">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/admin-words.png" onclick="openModal('modal-5');" alt="django admin words">
+                        <div id="modal-5" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/admin-words.png" alt="django admin words">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/flashcards/admin-word.png" onclick="openModal('modal-6');" alt="django admin word">
+                        <div id="modal-6" class="modal">
+                            <img class="modalAnimate" src="../../static/img/flashcards/admin-word.png" alt="django admin word">
+                        </div>
+                    </div>
+
+                    <button id="backBtn" class="back">&#10094;</button>
+                    <button id="forwardBtn" class="forward">&#10095;</button>
+                </div>
+                <div id="slideCounter" class="slideshowCounter"></div>
+            </article>
         </main>
         <footer>
             <a href="../invnbis/index.html">&#10094; Previous Project</a>

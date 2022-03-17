@@ -103,6 +103,7 @@ section {
     width: 28rem;
     height: 14rem;
     margin: 0.5rem;
+    background-size: cover;
     border: 2px solid var(--neutral-color);
     border-radius: 0.25rem;
 }
@@ -217,32 +218,31 @@ img.slide {
 /* PROJECTS */
 #trivia {
     background-image: url("../img/kt/analytics-01.png");
-    background-size: cover;
 }
 #olp {
     background-image: url("../img/olp/records-03.png");
-    background-size: cover;
     background-position: center; 
 }
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
-    background-size: cover;
+}
+#flashcards {
+    background-image: url("../img/flashcards/filters.png");
 }
 #wh {
     background-image: url("../img/wh/home-01.png");
-    background-size: cover;
 }
 #il {
     background-image: url("../img/il/il-home-01.png");
-    background-size: cover;
 }
 #arff {
     background-image: url("../img/arff/arff-index-01.png");
-    background-size: cover;
 }
 #leo {
     background-image: url("../img/leo/home-01.png");
-    background-size: cover;
+}
+#im {
+    background-image: url("../img/im/channel.png");
 }
 
 @media (max-width: 576px) {

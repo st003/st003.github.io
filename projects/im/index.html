@@ -30,10 +30,48 @@
                 </a>
             </div>
         </header>
-        <main>
+        <main class="projectContainer">
             <section class="about">
                 <h2>Instant Messenger (CS50w)</h2>
+                <p>A Python Flask-based web-application for instant messenging. This was one of the assignments for HarvardX CS50W. The application supports self-registration, multiple users, simultaneously instant messenging, group chats, and direct messages. User can create their own group chat channels as well. One of the core technologies for this project was the use of websockets to create push notifications so a user did not need to refresh the page to see new messages.</p>
+                <h4>My Role</h4>
+                <p>I designed and developed this application based on a course rubrik</p>
+                <h4>Technology</h4>
+                <p>Python, JavaScript, Flask, Socket.IO</p>
+                <h4>Source Code</h4>
+                <p><a href="https://github.com/st003/CS50w-project2" target="_blank">https://github.com/st003/CS50w-project2</a></p>
             </section>
+            <article class="slideshow">
+                <div class="slideshowCaptions">
+                    <div class="captionText">Enter your screen name to start chatting</div>
+                    <div class="captionText">Chat in a group or send a direct message</div>
+                    <div class="captionText">Websockets are used to provide push notifications</div>
+                </div>
+                <div class="slideshowContent">
+                    <div>
+                        <img class="slide" src="../../static/img/im/register.png" onclick="openModal('modal-1');" alt="register">
+                        <div id="modal-1" class="modal">
+                            <img class="modalAnimate" src="../../static/img/im/register.png" alt="register">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/im/home.png" onclick="openModal('modal-2');" alt="home">
+                        <div id="modal-2" class="modal">
+                            <img class="modalAnimate" src="../../static/img/im/home.png" alt="home">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="slide" src="../../static/img/im/channel.png" onclick="openModal('modal-3');" alt="channel">
+                        <div id="modal-3" class="modal">
+                            <img class="modalAnimate" src="../../static/img/im/channel.png" alt="channel">
+                        </div>
+                    </div>
+
+                    <button id="backBtn" class="back">&#10094;</button>
+                    <button id="forwardBtn" class="forward">&#10095;</button>
+                </div>
+                <div id="slideCounter" class="slideshowCounter"></div>
+            </article>
         </main>
         <footer>
             <a href="../ecom/index.html">&#10094; Previous Project</a>
