@@ -221,13 +221,14 @@ img.slide {
 }
 #olp {
     background-image: url("../img/olp/records-03.png");
-    background-position: center; 
+    background-position: center;
 }
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
 }
 #flashcards {
     background-image: url("../img/flashcards/filters.png");
+    background-position: center;
 }
 #wh {
     background-image: url("../img/wh/home-01.png");
@@ -241,10 +242,17 @@ img.slide {
 #leo {
     background-image: url("../img/leo/home-01.png");
 }
+#ecom {
+    background-image: url("../img/ecom/home-01.png");
+}
 #im {
     background-image: url("../img/im/channel.png");
 }
+#pizza {
+    background-image: url("../img/pizza/menu-01-crop.png");
+}
 
+/* MEDIA QUERIES */
 @media (max-width: 576px) {
     header {
         display: block;
