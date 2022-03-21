@@ -28,16 +28,22 @@ function openModal(modalID, sliderID) {
 
     // construct, insert, and configure the exit button
     const closeBtn = document.createElement('button');
+    closeBtn.id = `close-${modalID}`;
     closeBtn.style.top = 'auto';
     closeBtn.style.bottom = 0;
     closeBtn.style.zIndex = 100;
     closeBtn.innerHTML = 'Close';
-    closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+    closeBtn.addEventListener('click', () => { closeModal(modalID); });
 
     if (sliderID) closeBtn.addEventListener('click', () => { destroySlider(sliderID) });
 
     modal.style.display = 'flex';
     modal.insertBefore(closeBtn, modal.getElementsByClassName('modalAnimate').item(0));
+}
+
+function closeModal(modalID) {
+    document.getElementById(modalID).style.display = 'none';
+    document.getElementById(`close-${modalID}`).remove();
 }
 
 // compare slide logic
@@ -51,6 +57,8 @@ function initCompareSlider(topImgID) {
     // set width & height of top image
     img.style.width  = `${w / 2}px`;
     img.style.height = `${h}px`;
+
+    // TODO - add window 'resize' event listenter to reset the slider
 
     // construct, insert, and position the slider handle
     const handle = document.createElement('div');
@@ -123,11 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const slideImg = slides[i].getElementsByClassName('slideImg').item(0);
             const modal    = slides[i].getElementsByClassName('modal').item(0);
-            var sliderID   = undefined;
 
-            if (slides[i].getElementsByClassName('imgCompareSliderContainer').length > 0) {
-                const topImg = slides[i].getElementsByClassName('topImg').item(0);
-                sliderID = `slider-${i}`;
+            if (slides[i].getElementsByClassName('imgCompareSlider').length > 0) {
+                const topImg = slides[i].getElementsByClassName('topImg').item(0).getElementsByTagName('img').item(0);
+                var sliderID = `slider-${i}`;
                 topImg.id = sliderID;
             }
 

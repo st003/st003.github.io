@@ -164,7 +164,7 @@ section {
 .slideshow button:hover {
     background-color: var(--secondary-color);
 }
-.slide img.slideImg {
+.slide .slideImg {
     display: none;
     max-width: 75%;
     border: 2px solid var(--primary-color);
@@ -182,18 +182,20 @@ section {
 /* modal */
 .modal {
     display: none;
-    width: 100vw;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+    width: 100vw;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     background-color: rgba(34, 34, 34, 0.7);
 }
-.modal img.modalAnimate {
+.modal .modalAnimate {
     max-width: 95%;
+}
+.modal img.modalAnimate {
     border: 2px solid var(--neutral-color);
 }
 .modal img.tall {
@@ -217,26 +219,18 @@ section {
 }
 
 /* Image compare slider */
-.imgCompareSliderContainer {
-    display: flex;
-    z-index: 20;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
 .imgCompareSlider {
+    display: flex;
     position: relative;
-    width: 95%;
-    height: 95%;
-}
-.imgCompare {
-    position: absolute;
+    z-index: 20;
 }
 .imgCompare img {
     width: 100%;
     object-fit: cover;
     object-position: left;
+}
+.topImg {
+    position: absolute;
 }
 .imgCompareSliderHandle {
     display: flex;
