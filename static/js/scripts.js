@@ -108,7 +108,6 @@ function destroySlider(topImgID) {
     // reset image resolution
     img.style.width  = '100%';
     img.style.height = 'auto';
-
     img.parentElement.parentElement.getElementsByClassName('imgCompareSliderHandle').item(0).remove();
 }
 
@@ -131,17 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const slideImg = slides[i].getElementsByClassName('slideImg').item(0);
             const modal    = slides[i].getElementsByClassName('modal').item(0);
+            const compare  = slides[i].getElementsByClassName('imgCompareSlider').length > 0;
 
-            if (slides[i].getElementsByClassName('imgCompareSlider').length > 0) {
+            if (compare) {
                 const topImg = slides[i].getElementsByClassName('topImg').item(0).getElementsByTagName('img').item(0);
-                var sliderID = `slider-${i}`;
-                topImg.id = sliderID;
+                topImg.id  = `slider-${i}`;
             }
 
-            const modalID = `modal-${i}`;
-            modal.id = modalID;
-            slideImg.addEventListener('click', () => { openModal(modalID, sliderID); });
-            if (sliderID) slideImg.addEventListener('click', () => { initCompareSlider(sliderID); });
+            modal.id = `modal-${i}`;
+            slideImg.addEventListener('click', () => { openModal(`modal-${i}`, (compare) ? `slider-${i}` : undefined); });
+            if (compare) slideImg.addEventListener('click', () => { initCompareSlider(`slider-${i}`); });
         }
     }
 

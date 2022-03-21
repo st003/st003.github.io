@@ -139,6 +139,11 @@ section {
     font-size: 2rem;
     text-align: center;
 }
+.slideShowDisclaimer {
+    padding-top: 0.75rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
 .slideshowContent {
     position: relative;
     padding: 1rem 2rem;
@@ -324,5 +329,8 @@ section {
     }
     .modal img {
         margin: 1rem;
+    }
+    .imgCompare img {
+        margin: 0;
     }
 }
