@@ -34,8 +34,15 @@ function openModal(modalID, sliderID) {
     closeBtn.style.zIndex = 100;
     closeBtn.innerHTML = 'Close';
     closeBtn.addEventListener('click', () => { closeModal(modalID); });
-
     if (sliderID) closeBtn.addEventListener('click', () => { destroySlider(sliderID) });
+
+    // instead of recalculating the slider positions when the window resizes, just close the modal
+    window.addEventListener('resize', () => {
+        if (sliderID) {
+            closeModal(modalID);
+            destroySlider(sliderID);
+        }
+    });
 
     modal.style.display = 'flex';
     modal.insertBefore(closeBtn, modal.getElementsByClassName('modalAnimate').item(0));
@@ -57,8 +64,6 @@ function initCompareSlider(topImgID) {
     // set width & height of top image
     img.style.width  = `${w / 2}px`;
     img.style.height = `${h}px`;
-
-    // TODO - add window 'resize' event listenter to reset the slider
 
     // construct, insert, and position the slider handle
     const handle = document.createElement('div');
