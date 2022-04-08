@@ -107,15 +107,28 @@ section {
     border: 2px solid var(--neutral-color);
     border-radius: 0.25rem;
 }
+.project:hover {
+    animation: projectHover 0.1s forwards;
+}
+@keyframes projectHover {
+    from {
+        z-index: auto;
+        transform: scale(1);
+    }
+    to {
+        z-index: 1;
+        transform: scale(1.2);
+    }
+}
 .project a {
     display: block;
     height: 100%;
 }
 .project a:hover {
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 128, 0, 0.3);
 }
 .project a:active {
-    opacity: 0.7;
+    background-color: rgba(0, 128, 0, 0.8);
 }
 .project h3 {
     padding: 0.75rem 0.75rem 0.25rem 0.75rem;
@@ -208,10 +221,10 @@ section {
     max-width: auto;
 }
 .modalAnimate {
-    animation: expand 0.3s;
+    animation: modalExpand 0.3s;
 }
 
-@keyframes expand {
+@keyframes modalExpand {
     from {
         transform: scale(0);
     } to {
