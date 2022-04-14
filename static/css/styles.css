@@ -87,15 +87,21 @@ section {
 }
 
 .about, .projects {
+    opacity: 0;
     background-color: var(--neutral-color);
+}
+.about {
+    animation: fade 1.25s forwards;
 }
 .about p {
     font-size: 1.25rem;
 }
-
 .projects {
     margin-top: 0;
+    animation: secondaryFade 1.25s forwards;
+    animation-delay: 0.35s;
 }
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -111,16 +117,6 @@ section {
 }
 .project:hover {
     animation: projectHover 0.1s forwards;
-}
-@keyframes projectHover {
-    from {
-        z-index: auto;
-        transform: scale(1);
-    }
-    to {
-        z-index: 1;
-        transform: scale(1.25);
-    }
 }
 .project a {
     display: block;
@@ -142,6 +138,9 @@ section {
 
 .singleImgContainer, .slideshow {
     margin: 1rem;
+    opacity: 0;
+    animation: secondaryFade 1.25s forwards;
+    animation-delay: 0.35s;
 }
 
 .singleImgContainer img {
@@ -230,15 +229,6 @@ section {
 .modalAnimate {
     animation: modalExpand 0.3s;
 }
-
-@keyframes modalExpand {
-    from {
-        transform: scale(0);
-    } to {
-        transform: scale(1);
-    }
-}
-
 .modalCloseBtn button:hover {
     background-color: var(--secondary-color);
 }
@@ -352,5 +342,44 @@ section {
     }
     .imgCompare img {
         margin: 0;
+    }
+}
+
+
+/* animations */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes secondaryFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes projectHover {
+    from {
+        z-index: auto;
+        transform: scale(1);
+    }
+    to {
+        z-index: 1;
+        transform: scale(1.25);
+    }
+}
+
+@keyframes modalExpand {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(1);
     }
 }
