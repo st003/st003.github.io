@@ -241,6 +241,10 @@ section {
 .slide img {
     width: 100%;
 }
+.slide .tallImg {
+    max-height: 90vh;
+    overflow-y: scroll;
+}
 .slideshowNav {
     display: flex;
     width: 100vw;
@@ -397,7 +401,10 @@ section {
     }
     .slide .caption {
         min-width: 80vw;
-        transform: translate(-50%, -125%);
+        transform: translate(-50%, -150%);
+    }
+    .slide .tallImg {
+        max-height: 80vh;
     }
     .slideshowNav {
         transform: translate(50%, 125%);
