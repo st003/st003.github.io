@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < slideshows.length; i++) {
 
         const currentSlideshow = initSlideshow(slideshows[i].id);
-        let currentSlideNum = currentSlideshow.slideNum;
+        currentSlideNum = currentSlideshow.slideNum;
         currentSlideshow.backBtn.addEventListener('click', () => {
             currentSlideNum = incrementSlide(currentSlideshow.slideshow, currentSlideNum, -1)
         });

@@ -34,6 +34,7 @@
             </div>
         </header>
         <main>
+
             <section class="about">
                 <h2>Website #3</h2>
                 <p>A corporate website running on WordPress. Uses a simple custom WordPress theme and is mobile optimized. The live website can be viewed at <a href="https://airportleotraining.com/" target="_blank">https://airportleotraining.com/</a></p>
@@ -44,32 +45,31 @@
                 <h4>Source Code</h4>
                 <p>This project is not open source</p>
             </section>
-            <article class="slideshow">
-                <div class="slideshowCaptions">
-                    <div class="captionText">Home Page</div>
-                    <div class="captionText">Home Page (Phone)</div>
-                </div>
-                <div class="slideshowContent">
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/leo/home-01-crop.png" alt="home page">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/leo/home-01.png" alt="home page">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/leo/home-02-crop.png" alt="home page phone">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/leo/home-02.png" alt="home page phone">
-                        </div>
-                    </div>
 
-                    <button id="backBtn" class="back">&#10094;</button>
-                    <button id="forwardBtn" class="forward">&#10095;</button>
+            <section class="image" onclick="openModal('imgModal')">
+                <span class="instructions">Click the image to open slide show</span>
+                <img src="../../static/img/leo/home-01-crop.png" alt="home page">
+            </section>
+
+            <div id="imgModal" class="modal">
+                <div class="modalContent">
+                    <div id="slideshow" class="slideshow">
+                        <div class="slide">
+                            <div class="caption">Home Page</div>
+                            <div class="tallImg">
+                                <img  src="../../static/img/leo/home-01.png" alt="home page">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Home Page (Phone)</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/leo/home-02.png" alt="home page phone">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slideshowCounter">
-                    <div id="slideCounter"></div>
-                </div>
-            </article>
+            </div>
+
         </main>
         <footer>
             <a href="../arff/index.html">&#10094; Previous Project</a>

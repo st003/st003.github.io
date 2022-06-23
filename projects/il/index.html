@@ -44,60 +44,55 @@
                 <h4>Source Code</h4>
                 <p>This project is not open source</p>
             </section>
-            <article class="slideshow">
-                <div class="slideshowCaptions">
-                    <div class="captionText">Home Page</div>
-                    <div class="captionText">Home Page (Phone)</div>
-                    <div class="captionText">Example Page 1</div>
-                    <div class="captionText">Example Page 1 (Phone)</div>
-                    <div class="captionText">Example Page 2</div>
-                    <div class="captionText">Example Page 2 (Phone)</div>
-                </div>
-                <div class="slideshowContent">
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-home-01-crop.png" alt="home page">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-home-01.png" alt="home page">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-home-02-crop.png" alt="home page phone">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-home-02.png" alt="home page phone">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-loss-01-crop.png" alt="example page 1">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-loss-01.png" alt="example page 1">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-loss-02-crop.png" alt="example page 1 phone">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-loss-02.png" alt="example page 1 phone">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-cyber-01-crop.png" alt="example page 2">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-cyber-01.png" alt="example page 2">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/il/il-cyber-02-crop.png" alt="example page 2 phone">
-                        <div class="modal">
-                            <img class="modalAnimate tall" src="../../static/img/il/il-cyber-02.png" alt="example page 2 phone">
-                        </div>
-                    </div>
 
-                    <button id="backBtn" class="back">&#10094;</button>
-                    <button id="forwardBtn" class="forward">&#10095;</button>
+            <section class="image" onclick="openModal('imgModal')">
+                <span class="instructions">Click the image to open slide show</span>
+                <img src="../../static/img/il/il-home-01-crop.png" alt="home page">
+            </section>
+
+            <div id="imgModal" class="modal">
+                <div class="modalContent">
+                    <div id="slideshow" class="slideshow">
+                        <div class="slide">
+                            <div class="caption">Home Page</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/il/il-home-01.png" alt="home page">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Home Page (Phone)</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/il/il-home-02.png" alt="home page phone">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Example Page 1</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/il/il-loss-01.png" alt="example page 1">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Example Page 1 (Phone)</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/il/il-loss-02.png" alt="example page 1 phone">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Example Page 2</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/il/il-cyber-01.png" alt="example page 2">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Example Page 2 (Phone)</div>
+                            <div class="tallImg">
+                                <img  src="../../static/img/il/il-cyber-02.png" alt="example page 2 phone">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slideshowCounter">
-                    <div id="slideCounter"></div>
-                </div>
-            </article>
+            </div>
+
         </main>
         <footer>
             <a href="../wh/index.html">&#10094; Previous Project</a>
