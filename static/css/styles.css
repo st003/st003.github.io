@@ -51,12 +51,13 @@ footer {
 footer a {
     padding: 1rem;
     background-color: var(--secondary-color);
+    border-radius: 0.25rem;
     color: var(--light-text);
     font-size: 1rem;
     font-weight: 700;
 }
 footer a:hover {
-    text-decoration: underline;
+    color: var(--primart-color);
 }
 footer span {
     margin: 0 0.25rem;
@@ -82,12 +83,15 @@ p {
 a {
     text-decoration: none;
 }
-section {
+section, .image {
     margin: 1rem;
+}
+
+section {
     padding: 1.5rem;
 }
 
-.about, .skills, .projects {
+.about, .skills, .projects, .image img {
     opacity: 0;
     background-color: var(--neutral-color);
     box-shadow: 0px 2px 12px 0px var(--box-shadow-color);
@@ -95,10 +99,10 @@ section {
 .about p, .skills p {
     font-size: 1.25rem;
 }
-.about, .skills, .projects {
+.about, .skills, .projects, .image img {
     animation: fade 1.25s forwards;
 }
-.skills {
+.skills, .image img {
     animation-delay: 0.35s;
 }
 .projects {
@@ -140,73 +144,32 @@ section {
     color: var(--light-text);
 }
 
-.singleImgContainer, .slideshow {
-    margin: 1rem;
-    opacity: 0;
-    animation: fade 1.25s forwards;
-    animation-delay: 0.35s;
+.image {
+    position: relative;
+    padding: 0;
 }
-
-.singleImgContainer img {
+.image:hover {
+    cursor: pointer;
+}
+.image img {
     width: 100%;
 }
-
-.slideshowCaptions {
-    padding: 1rem;
-    background-color: var(--neutral-color);
-    box-shadow: 0px 2px 12px 0px var(--box-shadow-color);
-    font-size: 2rem;
-    text-align: center;
-}
-.slideShowDisclaimer {
-    padding-top: 1rem;
-    font-size: 1.1rem;
-    text-align: center;
-}
-.slideshowContent {
-    position: relative;
-    padding: 1rem 2rem;
-    text-align: center;
-}
-.slideshow button {
+.image .instructions {
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    border: none;
-    cursor: pointer;
-    color: var(--light-text);
-    font-size: 1.5rem;
-}
-.slideshow button.back {
-    left: 0;
-}
-.slideshow button.forward {
-    right: 0;
-}
-.slideshow button:hover {
-    background-color: var(--secondary-color);
-}
-.slide .slideImg {
-    display: none;
-    max-width: 75%;
-    border: 2px solid var(--primary-color);
-    object-fit: cover;
-    cursor: pointer;
-}
-.slideshowCounter {
-    display: flex;
-    justify-content: center;
-}
-#slideCounter {
-    display: inline-block;
-    padding: 1rem;
-    padding-bottom: 0.5rem;
-    background-color: var(--neutral-color);
-    box-shadow: 0px 2px 3px 0px var(--box-shadow-color);
-    font-size: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: rgba(34, 34, 34, 0.2);
     text-align: center;
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+}
+.image .instructions:hover {
+    background-color: rgba(34, 34, 34, 0.7);
 }
 
 /* modal */
@@ -222,21 +185,89 @@ section {
     justify-content: center;
     background-color: rgba(34, 34, 34, 0.7);
 }
-.modal .modalAnimate {
-    max-width: 95%;
-}
-.modal img.modalAnimate {
+.modal .modalContent {
+    position: relative;
+    margin: 6rem;
     border: 2px solid var(--neutral-color);
-}
-.modal img.tall {
-    max-height: 95%;
-    max-width: auto;
-}
-.modalAnimate {
+    line-height: 0;
     animation: modalExpand 0.3s;
 }
-.modalCloseBtn button:hover {
+.modalExitButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:  translate(50%, -50%);
+    border-radius: 50%;
+}
+.modalExitButton:hover {
+    background-color: var(--primary-color);
+}
+
+.modalExitButton, .slideshowButton {
+    padding: 1rem 1.5rem;
+    opacity: 0.8;
     background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    color: var(--light-text);
+    font-size: 1.5rem;
+}
+.modalExitButton:hover, .slideshowButton:hover {
+    background-color: var(--primary-color);
+}
+
+/* slideshow */
+.slideshow {
+    position: relative;
+}
+.slide {
+    position: relative;
+    display: none;
+}
+.slide .caption {
+    min-width: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: rgba(34, 34, 34, 0.7);
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.slide img {
+    width: 100%;
+}
+.slideshowNav {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    right: 50%;
+    bottom: 0%;
+    transform: translate(50%, 50%);
+    justify-content: center;
+}
+.slideshowButton {
+    border-radius: 0.25rem;
+}
+.slideCounterContainer {
+    display: flex;
+    height: 58.4px; /* Why does 100% not work here? */
+    margin: 0 0.5rem;
+    align-items: center;
+    opacity: 0.8;
+    border-radius: 0.25rem;
+    background-color: var(--secondary-color);
+}
+.slideCounter {
+    padding: 0 1rem;
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 /* Image compare slider */
@@ -336,15 +367,8 @@ section {
     .about p, .skills p {
         font-size: 1.15rem;
     }
-
-    .slideshowCaptions {
-        font-size: 1.5rem;
-    }
-    img.slide {
-        max-width: 70%;
-    }
-    .modal img {
-        margin: 1rem;
+    .image .instructions, .slide .caption {
+        padding: 0.25rem 0.5rem;
     }
     .imgCompare img {
         margin: 0;
@@ -352,8 +376,10 @@ section {
 }
 
 @media (max-width: 980px) {
-    section {
+    section, .image {
         margin: 0.75rem;
+    }
+    section {
         padding: 0.75rem;
     }
     .project {
@@ -365,6 +391,16 @@ section {
     }
     .project h3 {
         font-size: 1.25rem;
+    }
+    .modal .modalContent {
+        margin: 2.5rem;
+    }
+    .slide .caption {
+        min-width: 80vw;
+        transform: translate(-50%, -125%);
+    }
+    .slideshowNav {
+        transform: translate(50%, 125%);
     }
 }
 

@@ -1,40 +1,84 @@
+// svgs
+const backSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16"><path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/></svg>'
+
+const closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>'
+
+const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>'
+
 // slideshow logic
-function incrementSlide(currentSlide, increment) {
-    return displaySlide(currentSlide += increment);
+function incrementSlide(slideshow, currentSlide, increment) {
+    return displaySlide(slideshow, currentSlide += increment);
 }
 
+function displaySlide(slideshow, slideNum) {
+    const counter = document.getElementById(`${slideshow.id}-counter`);
+    const slides  = slideshow.getElementsByClassName('slide');
 
-function displaySlide(slideNum) {
-    const slideCounter = document.getElementById('slideCounter');
-    const slideImgs = document.getElementsByClassName('slideImg');
-    const captions = document.getElementsByClassName('captionText');
+    // wrapping behavior
+    if (slideNum > slides.length - 1) slideNum = 0;
+    if (slideNum < 0) slideNum = slides.length -1;
 
-    if (slideNum > slideImgs.length - 1) slideNum = 0;
-    if (slideNum < 0) slideNum = slideImgs.length -1;
-    for (let i = 0; i < slideImgs.length; i++) {
-        slideImgs[i].style.display = 'none';
-        captions[i].style.display = 'none';
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
     }
 
-    slideCounter.innerHTML = `${slideNum + 1} / ${slideImgs.length}`;
-    slideImgs[slideNum].style.display = 'inline';
-    captions[slideNum].style.display = 'block';
+    counter.innerHTML = `${slideNum + 1} / ${slides.length}`;
+    slides[slideNum].style.display  = 'block';
     return slideNum;
+}
+
+function initSlideshow(slideshowID) {
+    const slideshow = document.getElementById(slideshowID);
+
+    // create nav
+    const slideshowNav = document.createElement('div');
+    slideshowNav.classList.add('slideshowNav');
+
+    const backBtn     = document.createElement('button');
+    backBtn.innerHTML = backSvg;
+    backBtn.classList.add('slideshowButton');
+    slideshowNav.appendChild(backBtn);
+
+    const slideCounterContainer = document.createElement('div');
+    slideCounterContainer.classList.add('slideCounterContainer');
+
+    const slideCounter = document.createElement('div');
+    slideCounter.id = `${slideshowID}-counter`;
+    slideCounter.classList.add('slideCounter');
+
+    slideCounterContainer.appendChild(slideCounter);
+    slideshowNav.appendChild(slideCounterContainer);
+
+    const fwdBtn     = document.createElement('button');
+    fwdBtn.innerHTML = forwardSvg;
+    fwdBtn.classList.add('slideshowButton');
+    slideshowNav.appendChild(fwdBtn);
+
+    // insert nav
+    slideshow.appendChild(slideshowNav);
+
+    const initialSlideNum = 0;
+    displaySlide(slideshow, initialSlideNum);
+
+    return {
+        slideshow: slideshow, 
+        slideNum: initialSlideNum,
+        backBtn: backBtn,
+        fwdBtn: fwdBtn
+    }
 }
 
 // modal logic
 function openModal(modalID, sliderID) {
     const modal = document.getElementById(modalID);
+    const modalContent = modal.getElementsByClassName('modalContent').item(0);
 
-    // construct, insert, and configure the exit button
-    const closeBtn = document.createElement('button');
-    closeBtn.id = `close-${modalID}`;
-    closeBtn.style.top = 'auto';
-    closeBtn.style.bottom = 0;
-    closeBtn.style.zIndex = 100;
-    closeBtn.innerHTML = 'Close';
+    const closeBtn     = document.createElement('button');
+    closeBtn.innerHTML = closeSvg;
+    closeBtn.classList.add('modalExitButton');
     closeBtn.addEventListener('click', () => { closeModal(modalID); });
     if (sliderID) closeBtn.addEventListener('click', () => { destroySlider(sliderID) });
+    modalContent.appendChild(closeBtn);
 
     // instead of recalculating the slider positions when the window resizes, just close the modal
     window.addEventListener('resize', () => {
@@ -45,12 +89,11 @@ function openModal(modalID, sliderID) {
     });
 
     modal.style.display = 'flex';
-    modal.insertBefore(closeBtn, modal.getElementsByClassName('modalAnimate').item(0));
 }
 
 function closeModal(modalID) {
     document.getElementById(modalID).style.display = 'none';
-    document.getElementById(`close-${modalID}`).remove();
+    document.getElementsByClassName('modalExitButton').item(0).remove();
 }
 
 // compare slide logic
@@ -118,6 +161,7 @@ function destroySlider(topImgID) {
 
 
 /* EVENT LISTENERS */
+/*
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementsByClassName('slideshow').length > 0) {
 
@@ -149,3 +193,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+*/
