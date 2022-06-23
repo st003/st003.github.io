@@ -120,25 +120,13 @@
                     </div>
                 </div>
             </div>
+
         </main>
 
         <footer>
             <a href="../olp/index.html">&#10094; Previous Project</a>
             <span></span>
             <a class="next" href="../invnbis/index.html">Next Project &#10095;</a>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const slideshow = initSlideshow('slideshow');
-                    let currentSlideNum = slideshow.slideNum;
-                    slideshow.backBtn.addEventListener('click', () => {
-                        currentSlideNum = incrementSlide(slideshow.slideshow, currentSlideNum, -1)
-                    });
-                    slideshow.fwdBtn.addEventListener('click', () => {
-                        currentSlideNum = incrementSlide(slideshow.slideshow, currentSlideNum, 1)
-                    });
-                });
-            </script>
         </footer>
     </body>
 </html>

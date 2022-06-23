@@ -161,36 +161,40 @@ function destroySlider(topImgID) {
 
 
 /* EVENT LISTENERS */
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementsByClassName('slideshow').length > 0) {
 
-        // configure slideshow back and forward buttons
-        let currentSlide = displaySlide(0);
-        document.getElementById('backBtn').addEventListener('click', () => {
-            currentSlide = incrementSlide(currentSlide, -1);
+    // configure slideshows
+    const slideshows = document.getElementsByClassName('slideshow');
+    for (let i = 0; i < slideshows.length; i++) {
+
+        const currentSlideshow = initSlideshow(slideshows[i].id);
+        let currentSlideNum = currentSlideshow.slideNum;
+        currentSlideshow.backBtn.addEventListener('click', () => {
+            currentSlideNum = incrementSlide(currentSlideshow.slideshow, currentSlideNum, -1)
         });
-        document.getElementById('forwardBtn').addEventListener('click', () => {
-            currentSlide = incrementSlide(currentSlide, 1);
+        currentSlideshow.fwdBtn.addEventListener('click', () => {
+            currentSlideNum = incrementSlide(currentSlideshow.slideshow, currentSlideNum, 1)
         });
 
-        const slides = document.getElementsByClassName('slide');
-        for (let i = 0; i < slides.length; i++) {
-
-            const slideImg = slides[i].getElementsByClassName('slideImg').item(0);
-            const modal    = slides[i].getElementsByClassName('modal').item(0);
-            const compare  = slides[i].getElementsByClassName('imgCompareSlider').length > 0;
-
-            if (compare) {
-                const topImg = slides[i].getElementsByClassName('topImg').item(0).getElementsByTagName('img').item(0);
-                topImg.id  = `slider-${i}`;
-            }
-
-            modal.id = `modal-${i}`;
-            slideImg.addEventListener('click', () => { openModal(`modal-${i}`, (compare) ? `slider-${i}` : undefined); });
-            if (compare) slideImg.addEventListener('click', () => { initCompareSlider(`slider-${i}`); });
-        }
     }
 
-});
+/*
+    const slides = document.getElementsByClassName('slide');
+    for (let i = 0; i < slides.length; i++) {
+
+        const slideImg = slides[i].getElementsByClassName('slideImg').item(0);
+        const modal    = slides[i].getElementsByClassName('modal').item(0);
+        const compare  = slides[i].getElementsByClassName('imgCompareSlider').length > 0;
+
+        if (compare) {
+            const topImg = slides[i].getElementsByClassName('topImg').item(0).getElementsByTagName('img').item(0);
+            topImg.id  = `slider-${i}`;
+        }
+
+        modal.id = `modal-${i}`;
+        slideImg.addEventListener('click', () => { openModal(`modal-${i}`, (compare) ? `slider-${i}` : undefined); });
+        if (compare) slideImg.addEventListener('click', () => { initCompareSlider(`slider-${i}`); });
+    }
 */
+});

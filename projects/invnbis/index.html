@@ -34,6 +34,7 @@
             </div>
         </header>
         <main class="projectContainer">
+
             <section class="about">
                 <h2>Admin Tool #1</h2>
                 <p>This is one of multiple in-house customer administrative tools I wrote to cut down on time consuming data-entry and auditing tasks for a customer. It's a Python Flask-based web-application backed by a MySQL database. Some of its services include: user authentication, customer data storage, automated email notifications, reporting, and notably a data import utility connected to the customer's Learning Management System (LMS) via a RESTful integration. With functionality completed, this app reduced the time to complete a series of monthly tasks from 1-2 business days to under 1 hour.</p>
@@ -44,77 +45,56 @@
                 <h4>Source Code</h4>
                 <p>This project is not open source</p>
             </section>
-            <article class="slideshow">
-                <div class="slideshowCaptions">
-                    <div class="captionText">Log in page to authenticate employees</div>
-                    <div class="captionText">The list of customer accounts are easily search-able</div>
-                    <div class="captionText">Adding new accounts</div>
-                    <div class="captionText">Editing an existing account</div>
-                    <div class="captionText">A simple user import wizard accepts CSVs</div>
-                    <div class="captionText">The importer returns user-by-user import results</div>
-                    <div class="captionText">Graphical reporting provides and overview of categories and billing</div>
-                    <div class="captionText">Setup configs, batch tools, and logs are available from the GUI</div>
-                </div>
-                <div class="slideshowContent">
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/login-01.png" alt="login">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/login-01.png" alt="login">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/accounts-01.png" alt="table of accounts">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/accounts-01.png" alt="table of accounts">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/new-account-01.png" alt="new account">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/new-account-01.png" alt="new account">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/existing-account-01.png" alt="existing account">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/existing-account-01.png" alt="existing account">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/import-users-01.png" alt="user import wizard">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/import-users-01.png" alt="user import wizard">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/import-users-02.png" alt="user import results">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/import-users-02.png" alt="user import results">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/reports-01-crop.png" alt="reporting">
-                        <div class="modal">
-                            <img class="tall modalAnimate" src="../../static/img/invnbis/reports-01.png" alt="reporting">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img class="slideImg" src="../../static/img/invnbis/setup-01.png" alt="setup">
-                        <div class="modal">
-                            <img class="modalAnimate" src="../../static/img/invnbis/setup-01.png" alt="setup">
-                        </div>
-                    </div>
 
-                    <button id="backBtn" class="back">&#10094;</button>
-                    <button id="forwardBtn" class="forward">&#10095;</button>
+            <section class="image" onclick="openModal('imgModal')">
+                <span class="instructions">Click the image to open slide show</span>
+                <img src="../../static/img/invnbis/reports-01-crop.png" alt="reporting">
+            </section>
+
+            <div id="imgModal" class="modal">
+                <div class="modalContent">
+                    <div id="slideshow" class="slideshow">
+                        <div class="slide">
+                            <div class="caption">Log in page to authenticate employees</div>
+                            <img src="../../static/img/invnbis/login-01.png" alt="login">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">The list of customer accounts are easily search-able</div>
+                            <img src="../../static/img/invnbis/accounts-01.png" alt="table of accounts">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Adding new accounts</div>
+                            <img src="../../static/img/invnbis/new-account-01.png" alt="new account">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Editing an existing account</div>
+                            <img src="../../static/img/invnbis/existing-account-01.png" alt="existing account">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">A simple user import wizard accepts CSVs</div>
+                            <img src="../../static/img/invnbis/import-users-01.png" alt="user import wizard">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">The importer returns user-by-user import results</div>
+                            <img src="../../static/img/invnbis/import-users-02.png" alt="user import results">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Graphical reporting provides and overview of categories and billing</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/invnbis/reports-01.png" alt="reporting">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Setup configs, batch tools, and logs are available from the GUI</div>
+                            <img src="../../static/img/invnbis/setup-01.png" alt="setup">
+                        </div>
+                    </div>
                 </div>
-                <div class="slideshowCounter">
-                    <div id="slideCounter"></div>
-                </div>
-            </article>
+            </div>
+
         </main>
         <footer>
-            <a href="../olp/index.html">&#10094; Previous Project</a>
+            <a href="../kt/index.html">&#10094; Previous Project</a>
             <span></span>
             <a class="next" href="../flashcards/index.html">Next Project &#10095; </a>
         </footer>
