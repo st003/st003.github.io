@@ -242,7 +242,7 @@ section {
     width: 100%;
 }
 .slide .tallImg {
-    max-height: 85vh;
+    max-height: 90vh;
     overflow-y: scroll;
 }
 .slideshowNav {
@@ -302,19 +302,17 @@ section {
 }
 
 /* PROJECTS */
-#trivia {
-    background-image: url("../img/kt/analytics-01.png");
-}
 #olp {
     background-image: url("../img/olp/records-03.png");
-    background-position: center;
+}
+#trivia {
+    background-image: url("../img/kt/analytics-01.png");
 }
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
 }
 #flashcards {
     background-image: url("../img/flashcards/filters.png");
-    background-position: center;
 }
 #wh {
     background-image: url("../img/wh/home-01.png");
@@ -330,14 +328,12 @@ section {
 }
 #ecom {
     background-image: url("../img/ecom/home-01.png");
-    background-position: center;
 }
 #im {
     background-image: url("../img/im/channel.png");
 }
 #pizza {
-    background-image: url("../img/pizza/menu-01-crop.png");
-    background-position: center;
+    background-image: url("../img/pizza/cart-01.png");
 }
 
 /* MEDIA QUERIES */
