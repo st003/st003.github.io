@@ -371,7 +371,6 @@ section {
         padding: 0.25rem 0.5rem;
     }
     .slide .caption {
-        min-width: 90vw;
         font-size: 1rem;
     }
     .imgCompare img {
@@ -401,7 +400,7 @@ section {
     }
     .slide .caption {
         min-width: 90vw;
-        transform: translate(-50%, -125%);
+        transform: translate(-50%, -150%);
         font-size: 1.15rem;
     }
     .slide .tallImg {

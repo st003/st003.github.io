@@ -34,6 +34,7 @@
             </div>
         </header>
         <main>
+
             <section class="about">
                 <h2>Learning Management System (LMS)</h2>
                 <p>A Java-based web-application backed by a Microsoft SQL database designed for delivering web-based training content to users. Core features include: user authentication, video-based training delivery, reporting, email notifications, and a direct-to-customer e-commerce module. I was part of a team of developers on this project and over the course of a decade, designed and tested numerous enhancements (including the e-commerce module), project managed a small development team, and eventually re-wrote the entire user interface, transitioning from server-side rendering using JSP to a single page application using the Vue.js framework. In addition I've contributed to multiple RESTful web-service API endpoints.</p>
@@ -45,146 +46,135 @@
                 <h4>Source Code</h4>
                 <p>This project is not open source</p>
             </section>
+
+            <section class="image" onclick="openModal('imgModal')">
+                <span class="instructions">Click the image to open slide show</span>
+                <img src="../../static/img/olp/my-courses-02.png" alt="my courses page">
+            </section>
+
+            <div id="imgModal" class="modal">
+                <div class="modalContent">
+                    <div id="slideshow" class="slideshow">
+                        <div class="slide">
+                            <div class="caption">Each user has a unique login</div>
+                            <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">The training catalog can be customize per user</div>
+                            <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Mobile support</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/olp/my-courses-mobile-02.png" alt="my courses page phone">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Reporting for managers and administrators</div>
+                            <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Redesigned GUI report filters</div>
+                            <img src="../../static/img/olp/records-03.png" alt="reports filters">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Support for user profile management</div>
+                            <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">Administrators can customize course configurations</div>
+                            <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
+                        </div>
+                        <div class="slide">
+                            <div class="caption">And global system configurations</div>
+                            <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
+                        </div>
+
+                        <div class="slide">
+                            <div class="caption">Mobile view</div>
+                            <div class="tallImg">
+                                <img src="../../static/img/olp/system-management-03.png" alt="system management page phone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--
+            <article class="slideshow">
+                <div class="slideshowContent">
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/login-01.png" alt="old login page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/my-courses-01.png" alt="old my courses page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/records-01.png" alt="old reports page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/new-user-01.png" alt="old new user page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/new-course-01.png" alt="old new course page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="imgCompareSlider">
+                            <div class="imgCompare topImg">
+                                <img src="../../static/img/olp/system-management-01.png" alt="old system management page">
+                            </div>
+                            <div class="imgCompare">
+                                <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+-->
+
         </main>
-        <article class="slideshow">
-            <div class="slideshowCaptions">
-                <div class="captionText">Each user has a unique login</div>
-                <div class="captionText">The training catalog can be customize per user</div>
-                <div class="captionText">Mobile support</div>
-                <div class="captionText">Reporting for managers and administrators</div>
-                <div class="captionText">Redisgned GUI report filters</div>
-                <div class="captionText">Support for user profile management</div>
-                <div class="captionText">Administrators can customize course configurations</div>
-                <div class="captionText">And global system configurations</div>
-                <div class="captionText">Mobile view</div>
-            </div>
-            <div class="slideShowDisclaimer">Click the image for user interface redesign before/after</div>
-            <div class="slideshowContent">
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/login-02.png" alt="login page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/login-01.png" alt="old login page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/my-courses-02.png" alt="my courses page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/my-courses-01.png" alt="old my courses page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/my-courses-mobile-02b.png" alt="my courses page phone">
-                    <div class="modal">
-                        <img class="modalAnimate tall" src="../../static/img/olp/my-courses-mobile-02.png" alt="my courses page phone">
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/records-02.png" alt="reports page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/records-01.png" alt="old reports page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/records-03.png" alt="reports filters">
-                    <div class="modal">
-                        <img class="modalAnimate" src="../../static/img/olp/records-03.png">
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/new-user-02.png" alt="new user page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/new-user-01.png" alt="old new user page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/new-course-02.png" alt="new course page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/new-course-01.png" alt="old new course page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/system-management-02.png" alt="system management page">
-                    <div class="modal">
-                        <div class="modalAnimate">
-                            <div class="imgCompareSlider">
-                                <div class="imgCompare topImg">
-                                    <img src="../../static/img/olp/system-management-01.png" alt="old system management page">
-                                </div>
-                                <div class="imgCompare">
-                                    <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img class="slideImg" src="../../static/img/olp/system-management-03.png" alt="system management page phone">
-                    <div class="modal">
-                        <img class="modalAnimate tall" src="../../static/img/olp/system-management-03b.png" alt="system management page phone">
-                    </div>
-                </div>
-
-                <button id="backBtn" class="back">&#10094;</button>
-                <button id="forwardBtn" class="forward">&#10095;</button>
-            </div>
-            <div class="slideshowCounter">
-                <div id="slideCounter"></div>
-            </div>
-        </article>
         <footer>
             <a href="../pizza/index.html">&#10094; Previous Project</a>
             <span></span>
