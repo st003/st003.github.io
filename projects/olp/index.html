@@ -47,7 +47,7 @@
                 <p>This project is not open source</p>
             </section>
 
-            <section class="image" onclick="openModal('imgModal')">
+            <section class="image" onclick="openModal('imgModal');">
                 <span class="instructions">Click the image to open slide show</span>
                 <img src="../../static/img/olp/my-courses-02.png" alt="my courses page">
             </section>
@@ -57,11 +57,27 @@
                     <div id="slideshow" class="slideshow">
                         <div class="slide">
                             <div class="caption">Each user has a unique login</div>
-                            <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
+                            <div id="baLogin" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/login-01.png" alt="old login page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
+                                </div>
+                                <button onclick="beforeAfter('baLogin');">Show Before</button>
+                            </div>
                         </div>
                         <div class="slide">
                             <div class="caption">The training catalog can be customize per user</div>
-                            <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
+                            <div id="baMyCourses" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/my-courses-01.png" alt="old my courses page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
+                                </div>
+                                <button onclick="beforeAfter('baMyCourses');">Show Before</button>
+                            </div>
                         </div>
                         <div class="slide">
                             <div class="caption">Mobile support</div>
@@ -71,7 +87,15 @@
                         </div>
                         <div class="slide">
                             <div class="caption">Reporting for managers and administrators</div>
-                            <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
+                            <div id="baReports" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/records-01.png" alt="old reports page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
+                                </div>
+                                <button onclick="beforeAfter('baReports');">Show Before</button>
+                            </div>
                         </div>
                         <div class="slide">
                             <div class="caption">Redesigned GUI report filters</div>
@@ -79,17 +103,40 @@
                         </div>
                         <div class="slide">
                             <div class="caption">Support for user profile management</div>
-                            <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
+                            <div id="baUserProfile" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/new-user-01.png" alt="old new user page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
+                                </div>
+                                <button onclick="beforeAfter('baUserProfile');">Show Before</button>
+                            </div>
                         </div>
                         <div class="slide">
                             <div class="caption">Administrators can customize course configurations</div>
-                            <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
+                            <div id="baCourse" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/new-course-01.png" alt="old new course page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
+                                </div>
+                                <button onclick="beforeAfter('baCourse');">Show Before</button>
+                            </div>
                         </div>
                         <div class="slide">
                             <div class="caption">And global system configurations</div>
-                            <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
+                            <div id="baSys" class="baCompare">
+                                <div class="baImgContainer before">
+                                    <img src="../../static/img/olp/system-management-01.png" alt="old system management page">
+                                </div>
+                                <div class="baImgContainer">
+                                    <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
+                                </div>
+                                <button onclick="beforeAfter('baSys');">Show Before</button>
+                            </div>
                         </div>
-
                         <div class="slide">
                             <div class="caption">Mobile view</div>
                             <div class="tallImg">
@@ -100,81 +147,8 @@
                 </div>
             </div>
 
-<!--
-            <article class="slideshow">
-                <div class="slideshowContent">
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/login-01.png" alt="old login page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/login-02.png" alt="redesigned login page">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/my-courses-01.png" alt="old my courses page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/my-courses-02.png" alt="redesigned my courses page">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/records-01.png" alt="old reports page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/records-02.png" alt="redesigned reports page">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/new-user-01.png" alt="old new user page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/new-user-02.png" alt="redesigned new user page">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/new-course-01.png" alt="old new course page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/new-course-02.png" alt="redesigned new course page">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="imgCompareSlider">
-                            <div class="imgCompare topImg">
-                                <img src="../../static/img/olp/system-management-01.png" alt="old system management page">
-                            </div>
-                            <div class="imgCompare">
-                                <img src="../../static/img/olp/system-management-02.png" alt="redesigned system management page">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </article>
--->
-
         </main>
+
         <footer>
             <a href="../pizza/index.html">&#10094; Previous Project</a>
             <span></span>

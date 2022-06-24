@@ -5,6 +5,26 @@ const closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 
 const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>'
 
+// modal logic
+function openModal(modalID) {
+    const modal = document.getElementById(modalID);
+    const modalContent = modal.getElementsByClassName('modalContent').item(0);
+
+    // construct close button
+    const closeBtn     = document.createElement('button');
+    closeBtn.innerHTML = closeSvg;
+    closeBtn.classList.add('modalExitButton');
+    closeBtn.addEventListener('click', () => { closeModal(modalID); });
+    modalContent.appendChild(closeBtn);
+
+    modal.style.display = 'flex';
+
+    function closeModal(modalID) {
+        document.getElementById(modalID).style.display = 'none';
+        document.getElementsByClassName('modalExitButton').item(0).remove();
+    }
+}
+
 // slideshow logic
 function incrementSlide(slideshow, currentSlide, increment) {
     return displaySlide(slideshow, currentSlide += increment);
@@ -24,6 +44,7 @@ function displaySlide(slideshow, slideNum) {
 
     counter.innerHTML = `${slideNum + 1} / ${slides.length}`;
     slides[slideNum].style.display  = 'block';
+
     return slideNum;
 }
 
@@ -68,100 +89,21 @@ function initSlideshow(slideshowID) {
     }
 }
 
-// modal logic
-function openModal(modalID, sliderID) {
-    const modal = document.getElementById(modalID);
-    const modalContent = modal.getElementsByClassName('modalContent').item(0);
+function beforeAfter(baCompareID) {
+    const baCompare = document.getElementById(baCompareID);
+    const beforeImg = baCompare.getElementsByClassName('before').item(0);
+    const baToggle  = baCompare.getElementsByTagName('button').item(0);
 
-    const closeBtn     = document.createElement('button');
-    closeBtn.innerHTML = closeSvg;
-    closeBtn.classList.add('modalExitButton');
-    closeBtn.addEventListener('click', () => { closeModal(modalID); });
-    if (sliderID) closeBtn.addEventListener('click', () => { destroySlider(sliderID) });
-    modalContent.appendChild(closeBtn);
-
-    // instead of recalculating the slider positions when the window resizes, just close the modal
-    window.addEventListener('resize', () => {
-        if (sliderID) {
-            closeModal(modalID);
-            destroySlider(sliderID);
-        }
-    });
-
-    modal.style.display = 'flex';
-}
-
-function closeModal(modalID) {
-    document.getElementById(modalID).style.display = 'none';
-    document.getElementsByClassName('modalExitButton').item(0).remove();
-}
-
-// compare slide logic
-function initCompareSlider(topImgID) {
-
-    let handleInUse = false;
-    const img       = document.getElementById(topImgID);
-    const w         = img.offsetWidth;
-    const h         = img.offsetHeight;
-
-    // set width & height of top image
-    img.style.width  = `${w / 2}px`;
-    img.style.height = `${h}px`;
-
-    // construct, insert, and position the slider handle
-    const handle = document.createElement('div');
-    handle.setAttribute('class', 'imgCompareSliderHandle');
-    handle.innerHTML = '&#10094 &#10095'
-    img.parentElement.parentElement.insertBefore(handle, null);
-    handle.style.top  = (h / 2) - (handle.offsetHeight / 2) + 'px';
-    handle.style.left = (w / 2) - (handle.offsetWidth / 2) + 'px';
-
-    // define re-usable internal procedures
-    function getMouseXPosition(event) {
-        const imgBound = img.getBoundingClientRect();
-        let xPos = (event.pageX - imgBound.left) - window.pageXOffset;
-        return xPos;
+    if (!beforeImg.style.display || beforeImg.style.display == 'none') {
+        beforeImg.style.display = 'block';
+        baToggle.innerHTML = 'Show After';
+    } else {
+        beforeImg.style.display = 'none';
+        baToggle.innerHTML = 'Show Before';
     }
-
-    function resizeImg(mousePos) {
-        img.style.width = `${mousePos}px`;
-        handle.style.left = img.offsetWidth - (handle.offsetWidth / 2) + 'px';
-    }
-
-    function moveSlider(event) {
-        if (handleInUse) {
-            let mousePos = getMouseXPosition(event);
-            if (mousePos < 0) mousePos = 0;
-            if (mousePos > w) mousePos = w;
-            resizeImg(mousePos);
-        }
-    }
-
-    function handleIsReady(event) {
-        event.preventDefault();
-        handleInUse = true;
-        window.addEventListener("mousemove", moveSlider);
-        window.addEventListener("touchmove", moveSlider);
-    }
-
-    // attached mouse and touch screen event listeners for stop and start
-    handle.addEventListener('mousedown', handleIsReady);
-    handle.addEventListener('touchstart', handleIsReady);
-    window.addEventListener('mouseup', () => { handleInUse = false; });
-    window.addEventListener('touchend', () => { handleInUse = false; });
 }
-
-function destroySlider(topImgID) {
-    const img = document.getElementById(topImgID);
-    // reset image resolution
-    img.style.width  = '100%';
-    img.style.height = 'auto';
-    img.parentElement.parentElement.getElementsByClassName('imgCompareSliderHandle').item(0).remove();
-}
-
 
 /* EVENT LISTENERS */
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // configure slideshows
@@ -169,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < slideshows.length; i++) {
 
         const currentSlideshow = initSlideshow(slideshows[i].id);
-        currentSlideNum = currentSlideshow.slideNum;
+        let currentSlideNum = currentSlideshow.slideNum;
         currentSlideshow.backBtn.addEventListener('click', () => {
             currentSlideNum = incrementSlide(currentSlideshow.slideshow, currentSlideNum, -1)
         });
@@ -179,22 +121,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-/*
-    const slides = document.getElementsByClassName('slide');
-    for (let i = 0; i < slides.length; i++) {
-
-        const slideImg = slides[i].getElementsByClassName('slideImg').item(0);
-        const modal    = slides[i].getElementsByClassName('modal').item(0);
-        const compare  = slides[i].getElementsByClassName('imgCompareSlider').length > 0;
-
-        if (compare) {
-            const topImg = slides[i].getElementsByClassName('topImg').item(0).getElementsByTagName('img').item(0);
-            topImg.id  = `slider-${i}`;
-        }
-
-        modal.id = `modal-${i}`;
-        slideImg.addEventListener('click', () => { openModal(`modal-${i}`, (compare) ? `slider-${i}` : undefined); });
-        if (compare) slideImg.addEventListener('click', () => { initCompareSlider(`slider-${i}`); });
-    }
-*/
 });
