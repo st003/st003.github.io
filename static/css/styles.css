@@ -327,6 +327,9 @@ section {
 #leo {
     background-image: url("../img/leo/home-01.png");
 }
+#staticsite {
+    background-image: url("../img/static/code.png");
+}
 #ecom {
     background-image: url("../img/ecom/home-01.png");
     background-position: center;
