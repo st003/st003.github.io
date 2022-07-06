@@ -1,6 +1,15 @@
 # Porfolio
 
-A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries. Static output files generated using: https://github.com/st003/static-site-gen
+A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries.
+
+## Build
+
+The site is built using the open-source static site generator: https://github.com/st003/static-site-gen. See the static site generator's documentation for installation instructions. To build, run:
+
+MacOS/Linux:
+```
+./build.sh
+```
 
 ## Running the tests
 
@@ -8,8 +17,8 @@ There are no tests at this time
 
 ## Deployment
 
-Place the files on a static file server.
+This repo is organized to gracefully deploy to GitHub pages. To deploy elsewhere, copy the contents of the portfolio folder to a static file server.
 
 ## Authors
 
-* **st003** - *Initial work*
+* **st003**
