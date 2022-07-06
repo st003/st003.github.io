@@ -1,0 +1,66 @@
+{% layout base %}
+
+{% block main %}
+    <section class="about">
+        <h2>Admin Tool #1</h2>
+        <p>This is one of multiple in-house customer administrative tools I wrote to cut down on time consuming data-entry and auditing tasks for a customer. It's a Python Flask-based web-application backed by a MySQL database. Some of its services include: user authentication, customer data storage, automated email notifications, reporting, and notably a data import utility connected to the customer's Learning Management System (LMS) via a RESTful integration. With functionality completed, this app reduced the time to complete a series of monthly tasks from 1-2 business days to under 1 hour.</p>
+        <h4>My Role</h4>
+        <p>I designed, developed, deployed, and maintained the entirety of this application</p>
+        <h4>Technology</h4>
+        <p>Python, JavaScript, Flask, Bootstrap, JQuery, Gunicorn, MySQL, Nginx, CentOS</p>
+        <h4>Source Code</h4>
+        <p>This project is not open source</p>
+    </section>
+
+    <section class="image" onclick="openModal('imgModal')">
+        <span class="instructions">Click the image to open slide show</span>
+        <img src="{% path static/img/invnbis/reports-01-crop.png %}" alt="reporting">
+    </section>
+
+    <div id="imgModal" class="modal">
+        <div class="modalContent">
+            <div id="slideshow" class="slideshow">
+                <div class="slide">
+                    <div class="caption">Log in page to authenticate employees</div>
+                    <img src="{% path static/img/invnbis/login-01.png %}" alt="login">
+                </div>
+                <div class="slide">
+                    <div class="caption">The list of customer accounts are easily search-able</div>
+                    <img src="{% path static/img/invnbis/accounts-01.png %}" alt="table of accounts">
+                </div>
+                <div class="slide">
+                    <div class="caption">Adding new accounts</div>
+                    <img src="{% path static/img/invnbis/new-account-01.png %}" alt="new account">
+                </div>
+                <div class="slide">
+                    <div class="caption">Editing an existing account</div>
+                    <img src="{% path static/img/invnbis/existing-account-01.png %}" alt="existing account">
+                </div>
+                <div class="slide">
+                    <div class="caption">A simple user import wizard accepts CSVs</div>
+                    <img src="{% path static/img/invnbis/import-users-01.png %}" alt="user import wizard">
+                </div>
+                <div class="slide">
+                    <div class="caption">The importer returns user-by-user import results</div>
+                    <img src="{% path static/img/invnbis/import-users-02.png %}" alt="user import results">
+                </div>
+                <div class="slide">
+                    <div class="caption">Graphical reporting provides and overview of categories and billing</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/invnbis/reports-01.png %}" alt="reporting">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Setup configs, batch tools, and logs are available from the GUI</div>
+                    <img src="{% path static/img/invnbis/setup-01.png %}" alt="setup">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="../kt/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../flashcards/index.html">Next &#10095; </a>
+{% endblock %}

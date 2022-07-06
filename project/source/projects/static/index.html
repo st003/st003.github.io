@@ -1,0 +1,24 @@
+{% layout base %}
+
+{% block main %}
+    <section class="about">
+        <h2>Static Site Generator</h2>
+        <p>A Jinja-inspired Python program for compiling static web files. User defined layouts and snippets allow for dynamically inserting text into HTML pages. Example uses include inserting redundant markup like navigation, CSS, and JavaScript into multiple pages.</p>
+        <h4>My Role</h4>
+        <p>Developer</p>
+        <h4>Technology</h4>
+        <p>Python</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/static-site-gen" target="_blank">https://github.com/st003/static-site-gen</a></p>
+    </section>
+
+    <section class="image">
+        <img src="{% path static/img/static/code.png %}" alt="source code">
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <a href="../leo/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../ecom/index.html">Next &#10095;</a>
+{% endblock %}

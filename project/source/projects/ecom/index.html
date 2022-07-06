@@ -1,0 +1,105 @@
+{% layout base %}
+
+{% block main %}
+    <section class="about">
+        <h2>E-Commerce Application (CS50W)</h2>
+        <p>A Python Django-based web-application for purchasing software subscriptions. This was my final project for HarvardX CS50W. I was given free reign to develop any type of application that I chose as long as I met course requirements. A software subscription e-commerce project was in the discovery phase at my workplace so I choose to develop an application that could possibly be spun-off into the final product, or simply serve as a prototype. While it never left the prototype phase, its development prepared me for designing, managing, and developing the final-customer facing product which was added into an existing enterprise application.</p>
+        <p>The businesses requirements of the application included: customer registration, shopping cart, customer licensee management, and merchant administrative tools.</p>
+        <h4>My Role</h4>
+        <p>I designed and developed this application based on course submission requirements</p>
+        <h4>Technology</h4>
+        <p>Python, JavaScript, Django, Bootstrap, SQLite</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/CS50w-Final-Project" target="_blank">https://github.com/st003/CS50w-Final-Project</a></p>
+    </section>
+
+    <section class="image" onclick="openModal('imgModal')">
+        <span class="instructions">Click the image to open slide show</span>
+        <img src="{% path static/img/ecom/home-01.png %}" alt="home">
+    </section>
+
+    <div id="imgModal" class="modal">
+        <div class="modalContent">
+            <div id="slideshow" class="slideshow">
+                <div class="slide">
+                    <div class="caption">Browse available software subscriptions</div>
+                    <img src="{% path static/img/ecom/home-01.png %}" alt="home">
+                </div>
+                <div class="slide">
+                    <div class="caption">Browse available software subscriptions (Phone)</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/ecom/home-02.png %}" alt="home mobile">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">New customers register for an account</div>
+                    <img src="{% path static/img/ecom/register-01.png %}" alt="register">
+                </div>
+                <div class="slide">
+                    <div class="caption">Add subscriptions to your cart</div>
+                    <img src="{% path static/img/ecom/shop-01.png %}" alt="shop">
+                </div>
+                <div class="slide">
+                    <div class="caption">Add subscriptions to your cart (Phone)</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/ecom/shop-02.png %}" alt="shop mobile">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">See more details on the subscriptions for sale</div>
+                    <img src="{% path static/img/ecom/item-01.png %}" alt="item page">
+                </div>
+                <div class="slide">
+                    <div class="caption">See more details on the subscriptions for sale (Phone)</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/ecom/item-02.png %}" alt="item page mobile">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Add subscriptions to your cart</div>
+                    <img src="{% path static/img/ecom/cart-01.png %}" alt="cart">
+                </div>
+                <div class="slide">
+                    <div class="caption">Customers may add additional non-purchasing users,</div>
+                    <img src="{% path static/img/ecom/users-01.png %}" alt="customer users">
+                </div>
+                <div class="slide">
+                    <div class="caption">and assign subscription licenses to them</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/ecom/assign-01.png %}" alt="assign license">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Review your purchase history</div>
+                    <img  src="{% path static/img/ecom/history-01.png %}" alt="purchase history">
+                </div>
+                <div class="slide">
+                    <div class="caption">Merchant administrators can manage products,</div>
+                    <img src="{% path static/img/ecom/products-01.png %}" alt="products">
+                </div>
+                <div class="slide">
+                    <div class="caption">customers,</div>
+                    <img src="{% path static/img/ecom/user-admin-01.png %}" alt="customers">
+                </div>
+                <div class="slide">
+                    <div class="caption">and transactions</div>
+                    <img src="{% path static/img/ecom/reports-01.png %}" alt="reporting">
+                </div>
+                <div class="slide">
+                    <div class="caption">Aditionally, the Django admin is available...</div>
+                    <img src="{% path static/img/ecom/admin-01.png %}" alt="django admin 1">
+                </div>
+                <div class="slide">
+                    <div class="caption">..for more detailed database administration</div>
+                    <img src="{% path static/img/ecom/admin-02.png %}" alt="django admin 2">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="../static/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../im/index.html">Next &#10095;</a>
+{% endblock %}

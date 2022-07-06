@@ -1,6 +1,6 @@
 # Porfolio
 
-A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries.
+A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries. Static output files generated using: https://github.com/st003/static-site-gen
 
 ## Running the tests
 

@@ -1,0 +1,56 @@
+{% layout base %}
+
+{% block main %}
+    <section class="about">
+        <h2>Language Learning Flashcards</h2>
+        <p>A Python Django-based web-application for language learning flashcards in the browser. This is a personal project I built to aid in both my language and programming study. The interface is simple, presenting the English word first, then the non-English translation upon demand. The Django admin is used to add new words and topics. Words can be filtered by a combination of topics and categories.</p>
+        <h4>My Role</h4>
+        <p>Developer, Maintainer</p>
+        <h4>Technology</h4>
+        <p>Python, JavaScript, Django, Vue.js, SQLite</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/flashcards" target="_blank">https://github.com/st003/flashcards</a></p>
+    </section>
+
+    <section class="image" onclick="openModal('imgModal')">
+        <span class="instructions">Click the image to open slide show</span>
+        <img src="{% path static/img/flashcards/filters.png %}" alt="filters">
+    </section>
+
+    <div id="imgModal" class="modal">
+        <div class="modalContent">
+            <div id="slideshow" class="slideshow">
+                <div class="slide">
+                    <div class="caption">Getting started page</div>
+                    <img src="{% path static/img/flashcards/get-started.png %}" alt="get started">
+                </div>
+                <div class="slide">
+                    <div class="caption">English word first</div>
+                    <img src="{% path static/img/flashcards/en.png %}" alt="english word">
+                </div>
+                <div class="slide">
+                    <div class="caption">Request the translation on demand</div>
+                    <img src="{% path static/img/flashcards/jp.png %}" alt="translation">
+                </div>
+                <div class="slide">
+                    <div class="caption">Words can be filtered by topic and category</div>
+                    <img src="{% path static/img/flashcards/filters.png %}" alt="filters">
+                </div>
+                <div class="slide">
+                    <div class="caption">The Django admin is used to create new cards and topics</div>
+                    <img src="{% path static/img/flashcards/admin-words.png %}" alt="django admin words">
+                </div>
+                <div class="slide">
+                    <div class="caption">Words can belong to multiple topics</div>
+                    <img src="{% path static/img/flashcards/admin-word.png %}" alt="django admin word">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="../invnbis/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../wh/index.html">Next &#10095;</a>
+{% endblock %}

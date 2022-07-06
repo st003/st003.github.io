@@ -1,0 +1,56 @@
+{% layout base %}
+
+{% block main %}
+    <section class="about">
+        <h2>Website #2</h2>
+        <p>A corporate website running on WordPress. Uses a simple custom WordPress theme and is mobile optimized. The live website can be viewed at <a href="https://www.arffrecurrent.com/" target="_blank">https://www.arffrecurrent.com/</a></p>
+        <h4>My Role</h4>
+        <p>User Interface developer</p>
+        <h4>Technology</h4>
+        <p>HTML, CSS, JavaScript, Bootstrap, PHP, WordPress</p>
+        <h4>Source Code</h4>
+        <p>This project is not open source</p>
+    </section>
+
+    <section class="image" onclick="openModal('imgModal')">
+        <span class="instructions">Click the image to open slide show</span>
+        <img src="{% path static/img/arff/arff-index-01-crop.png %}" alt="home page">
+    </section>
+
+    <div id="imgModal" class="modal">
+        <div class="modalContent">
+            <div id="slideshow" class="slideshow">
+                <div class="slide">
+                    <div class="caption">Home Page</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/arff/arff-index-01.png %}" alt="home page">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Home Page (Phone)</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/arff/arff-index-02.png %}" alt="home page phone">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Pricing Page</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/arff/arff-pricing-01.png %}" alt="pricing page">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="caption">Pricing Page (Phone)</div>
+                    <div class="tallImg">
+                        <img src="{% path static/img/arff/arff-pricing-02.png %}" alt="pricing page phone">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="../il/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../leo/index.html">Next &#10095;</a>
+{% endblock %}

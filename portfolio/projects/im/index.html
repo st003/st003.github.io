@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../../static/css/styles.css">
+
+        <script type="text/javascript" src="../../static/js/scripts.js"></script>
+
+        <title>Stuart Calcote Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <a class="title" href="../../index.html">
+                <h1>
+                    <span class="titleName">Stuart Calcote</span>
+                    <span class="titleDivider"> | </span>
+                    <span class="titleJob">Full Stack Web Developer</span>
+                </h1>
+            </a>
+            <div class="social-media">
+                <a href="../../index.html">
+                    <i class="bi bi-house-door-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/stuart-j-calcote" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/st003" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </header>
+        <main>
+                <section class="about">
+        <h2>Instant Messenger (CS50W)</h2>
+        <p>A Python Flask-based web-application for instant messaging. This was one of the assignments for HarvardX CS50W. The application supports self-registration, multiple users, simultaneous instant messaging, group chats, and direct messages. User can create their own group chat channels. One of the core technologies for this project was the use of websockets to create push notifications so a user does not need to refresh the page to see new messages.</p>
+        <h4>My Role</h4>
+        <p>I designed and developed this application based on a course rubrik</p>
+        <h4>Technology</h4>
+        <p>Python, JavaScript, Flask, Socket.IO</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/CS50w-project2" target="_blank">https://github.com/st003/CS50w-project2</a></p>
+    </section>
+
+    <section class="image" onclick="openModal('imgModal')">
+        <span class="instructions">Click the image to open slide show</span>
+        <img src="../../static/img/im/channel.png" alt="channel">
+    </section>
+
+    <div id="imgModal" class="modal">
+        <div class="modalContent">
+            <div id="slideshow" class="slideshow">
+                <div class="slide">
+                    <div class="caption">Enter your screen name to start chatting</div>
+                    <img src="../../static/img/im/register.png" alt="register">
+                </div>
+                <div class="slide">
+                    <div class="caption">Chat in a group or send a direct message</div>
+                    <img src="../../static/img/im/home.png" alt="home">
+                </div>
+                <div class="slide">
+                    <div class="caption">Websockets are used to provide push notifications</div>
+                    <img src="../../static/img/im/channel.png" alt="channel">
+                </div>
+            </div>
+        </div>
+    </div>
+        </main>
+        <footer>
+                <a href="../ecom/index.html">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="../pizza/index.html">Next &#10095;</a>
+        </footer>
+    </body>
+</html>
