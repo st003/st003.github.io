@@ -1,6 +1,6 @@
 # Portfolio
 
-A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries. View at: https://st003.github.io/
+A static website portfolio using raw HTML, CSS, and JavaScript. No third-party CSS/JS libraries. Icons courtesy of: https://icons.getbootstrap.com/. View live site at: https://st003.github.io/
 
 ## Build
 
@@ -17,7 +17,7 @@ There are no tests at this time
 
 ## Deployment
 
-This repo is organized to gracefully deploy to GitHub pages. To deploy elsewhere, copy the contents of the portfolio folder to a static file server.
+This repo is setup to gracefully deploy to GitHub pages. To deploy elsewhere, copy the contents of the portfolio folder to a static file server.
 
 ## Authors
 
