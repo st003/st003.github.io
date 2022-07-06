@@ -1,6 +1,6 @@
-# Porfolio
+# Portfolio
 
-A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries.
+A static website portfolio using raw HTML, CSS, and JavaScript. No third-party libraries. View at: https://st003.github.io/
 
 ## Build
 
