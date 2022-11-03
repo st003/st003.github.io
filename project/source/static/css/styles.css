@@ -96,7 +96,7 @@ section {
     background-color: var(--neutral-color);
     box-shadow: 0px 2px 12px 0px var(--box-shadow-color);
 }
-.about p, .skills p {
+.about p, .about ul, .skills p {
     font-size: 1.25rem;
 }
 .about, .skills, .projects, .image img, .image .instructions {
