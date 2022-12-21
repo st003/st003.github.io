@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python -m sitegen --dist=portfolio
+python3 -m sitegen --dist=portfolio
