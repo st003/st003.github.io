@@ -340,6 +340,9 @@ section {
     background-image: url("../img/wh/home-01.png");
     background-position: center;
 }
+#msc {
+    background-image: url("../img/msc/home-01-crop.png");
+}
 #il {
     background-image: url("../img/il/il-home-01.png");
 }
