@@ -342,6 +342,7 @@ section {
 }
 #msc {
     background-image: url("../img/msc/home-01-crop.png");
+    background-position: center;
 }
 #il {
     background-image: url("../img/il/il-home-01.png");
@@ -354,6 +355,7 @@ section {
 }
 #staticsite {
     background-image: url("../img/static/code.png");
+    background-position: center;
 }
 #ecom {
     background-image: url("../img/ecom/home-01.png");
@@ -361,10 +363,6 @@ section {
 }
 #im {
     background-image: url("../img/im/channel.png");
-}
-#pizza {
-    background-image: url("../img/pizza/cart-01.png");
-    background-position: center;
 }
 
 /* MEDIA QUERIES */
