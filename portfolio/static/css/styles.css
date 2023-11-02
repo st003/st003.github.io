@@ -331,12 +331,18 @@ section {
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
 }
-#flashcards {
-    background-image: url("../img/flashcards/filters.png");
-    background-position: center;
+#invphpmc {
+    background-image: url("../img/invphpmc/reports-01.png");
 }
 #wh {
     background-image: url("../img/wh/home-01.png");
+    background-position: center;
+}
+#staticsite {
+    background-image: url("../img/static/code.png");
+}
+#flashcards {
+    background-image: url("../img/flashcards/filters.png");
     background-position: center;
 }
 #msc {
@@ -351,19 +357,12 @@ section {
 #leo {
     background-image: url("../img/leo/home-01.png");
 }
-#staticsite {
-    background-image: url("../img/static/code.png");
-}
 #ecom {
     background-image: url("../img/ecom/home-01.png");
     background-position: center;
 }
 #im {
     background-image: url("../img/im/channel.png");
-}
-#pizza {
-    background-image: url("../img/pizza/cart-01.png");
-    background-position: center;
 }
 
 /* MEDIA QUERIES */
