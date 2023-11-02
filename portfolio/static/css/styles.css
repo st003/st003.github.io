@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    display: flex;
+    display: block;
     align-items: center;
     padding: 1rem;
     background-color: var(--primary-color);
@@ -27,13 +27,23 @@ header {
 header .title {
     color: var(--light-text);
 }
+.title .titleName, .title .titleJob {
+    display: block;
+}
+.title .titleDivider {
+    display: none;
+}
+.title .titleJob {
+    font-size: 1.25rem;
+}
 header .social-media {
-    flex-grow: 1;
-    text-align: right;
+    margin-top: 0.5rem;
+    text-align: left;
 }
 header .social-media a {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0;
+    font-size: 2rem;
     color: var(--light-text);
 }
 header .social-media a:hover, header .title h1:hover {
@@ -72,10 +82,10 @@ h1 {
 }
 h2 {
     margin-bottom: 1rem;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
 }
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 p {
     margin-top: 0;
@@ -88,11 +98,10 @@ a {
     text-decoration: none;
 }
 section, .image {
-    margin: 1rem;
+    margin: 0.75rem;
 }
-
 section {
-    padding: 1.5rem;
+    padding: 0.75rem;
 }
 
 .about, .skills, .projects, .image img {
@@ -100,8 +109,8 @@ section {
     background-color: var(--neutral-color);
     box-shadow: 0px 2px 12px 0px var(--box-shadow-color);
 }
-.about p, .about ul, .skills p {
-    font-size: 1.25rem;
+.about p, .about ul {
+    font-size: 1.15rem;
 }
 .about, .skills, .projects, .image img, .image .instructions {
     animation: fade 1.25s forwards;
@@ -118,8 +127,7 @@ section {
     flex-wrap: wrap;
 }
 .skill {
-    width: 175px;
-    margin-top: 0;
+    width: 125px;
     padding: 0;
     margin-right: 2.5rem;
 }
@@ -136,8 +144,8 @@ section {
     flex-wrap: wrap;
 }
 .project {
-    display: inline-block;
-    width: 28rem;
+    display: block;
+    width: 100%;
     height: 14rem;
     margin: 0.5rem;
     background-size: cover;
@@ -145,7 +153,7 @@ section {
     border-radius: 0.25rem;
 }
 .project:hover {
-    animation: projectHover 0.1s forwards;
+    animation: projectHoverSmall 0.1s forwards;
 }
 .project a {
     display: block;
@@ -162,6 +170,7 @@ section {
     opacity: 0.8;
     background-color: var(--primary-color);
     text-align: center;
+    font-size: 1.15rem;
     color: var(--light-text);
 }
 
@@ -182,7 +191,7 @@ section {
     transform: translate(-50%, -50%);
     z-index: 5;
     opacity: 0;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     background-color: rgba(34, 34, 34, 0.2);
     text-align: center;
@@ -209,7 +218,7 @@ section {
 }
 .modal .modalContent {
     position: relative;
-    margin: 6rem;
+    margin: 2.5rem;
     border: 2px solid var(--neutral-color);
     line-height: 0;
     animation: modalExpand 0.3s;
@@ -218,21 +227,22 @@ section {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 60;
     transform: translate(50%, -50%);
     padding: 1rem 1.25rem;
     border-radius: 50%;
+    font-size: 1.25rem;
 }
 .modalExitButton:hover {
     background-color: var(--primary-color);
 }
 
 .modalExitButton, .slideshowButton, .baCompare button {
-    opacity: 0.6;
+    opacity: 0.8;
     background-color: var(--secondary-color);
     border: none;
     cursor: pointer;
     color: var(--light-text);
-    font-size: 1.25rem;
 }
 .modalExitButton:hover, .slideshowButton:hover, .baCompare button:hover {
     background-color: var(--primary-color);
@@ -251,21 +261,21 @@ section {
     top: 0;
     left: 50%;
     z-index: 50;
-    transform: translate(-50%, 15%);
+    min-width: 80vw;
+    transform: translate(-50%, -200%);
     padding: 0.75rem 0.75rem 0.25rem 0.75rem;
     border-radius: 0.25rem;
     background-color: rgba(34, 34, 34, 0.7);
     text-align: center;
     color: var(--light-text);
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 .slide img {
     width: 100%;
 }
 .slide .tallImg {
-    max-height: 90vh;
-    overflow-y: scroll;
+    max-height: 70vh;
 }
 .slideshowNav {
     display: flex;
@@ -273,9 +283,9 @@ section {
     position: absolute;
     right: 50%;
     bottom: 0%;
-    transform: translate(50%, 0%);
+    transform: translate(50%, 125%);
     justify-content: center;
-    padding: 0.5rem;
+    padding: 0;
 }
 .slideshowButton {
     padding: 1rem 1.5rem;
@@ -286,7 +296,7 @@ section {
     height: 58.4px; /* Why does 100% not work here? */
     margin: 0 0.5rem;
     align-items: center;
-    opacity: 0.6;
+    opacity: 0.8;
     border-radius: 0.25rem;
     background-color: var(--secondary-color);
 }
@@ -315,9 +325,10 @@ section {
     position: absolute;
     bottom: 0;
     z-index: 25;
-    margin: 0.5rem;
-    padding: 1rem 1.5rem;
+    margin: 0.25rem;
+    padding: 0.5rem;
     border-radius: 0.25rem;
+    font-size: 1rem;
 }
 
 /* PROJECTS */
@@ -327,12 +338,15 @@ section {
 }
 #trivia {
     background-image: url("../img/kt/analytics-01.png");
+    background-position: center;
 }
 #invnbis {
     background-image: url("../img/invnbis/reports-01.png");
+    background-position: center;
 }
 #invphpmc {
     background-image: url("../img/invphpmc/reports-01.png");
+    background-position: center;
 }
 #wh {
     background-image: url("../img/wh/home-01.png");
@@ -340,6 +354,7 @@ section {
 }
 #staticsite {
     background-image: url("../img/static/code.png");
+    background-position: center;
 }
 #flashcards {
     background-image: url("../img/flashcards/filters.png");
@@ -347,15 +362,19 @@ section {
 }
 #msc {
     background-image: url("../img/msc/home-01-crop.png");
+    background-position: center;
 }
 #il {
     background-image: url("../img/il/il-home-01.png");
+    background-position: center;
 }
 #arff {
     background-image: url("../img/arff/arff-index-01.png");
+    background-position: center;
 }
 #leo {
     background-image: url("../img/leo/home-01.png");
+    background-position: center;
 }
 #ecom {
     background-image: url("../img/ecom/home-01.png");
@@ -363,93 +382,132 @@ section {
 }
 #im {
     background-image: url("../img/im/channel.png");
+    background-position: center;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES
+ *
+ * Breakpoints based on Bootstrap 5
+ */
 
 /* small devices */
-@media (max-width: 576px) {
+@media (min-width: 576px) {
     header {
-        display: block;
+        display: flex;
     }
     .title .titleName, .title .titleJob {
-        display: block;
+        display: inline;
     }
     .title .titleDivider {
-        display: none;
+        display: inline;
     }
     .title .titleJob {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     header .social-media {
-        margin-top: 0.5rem;
-        text-align: left;
+        flex-grow: 1;
+        margin-top: 0;
+        text-align: right;
     }
     header .social-media a {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-    h4 {
-        font-size: 1.2rem;
-    }
-    .about p, .about ul {
-        font-size: 1.15rem;
-    }
-    .image .instructions, .slide .caption {
-        padding: 0.25rem 0.5rem;
-    }
-    .slide .caption {
-        min-width: 80vw;
-        transform: translate(-50%, -200%);
-        font-size: 1rem;
-    }
-    .slide .tallImg {
-        max-height: 70vh;
+        margin-right: 0;
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
     }
     .slideshowNav {
-        transform: translate(50%, 125%);
-        padding: 0;
+        transform: translate(50%, 50%);
     }
-    .modalExitButton, .slideCounterContainer, .slideshowButton {
-        opacity: 0.8;
+    .slide .caption {
+        min-width: 40vw;
+        transform: translate(-50%, -50%);
     }
-    .baCompare button {
-        margin: 0.25rem;
-        padding: 0.5rem;
-        font-size: 1rem;
+    .slide .tallImg {
+        overflow-y: scroll;
     }
 }
 
 /* medium devices */
-@media (max-width: 980px) {
-    section, .image {
-        margin: 0.75rem;
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.25rem;
     }
-    section {
-        padding: 0.75rem;
-    }
-    .skill {
-        width: 125px;
-        margin-top: 0;
-    }
-    .project {
-        display: block;
-        width: 100%;
-    }
-    .project:hover {
-        animation: projectHoverSmall 0.1s forwards;
-    }
-    .project h3 {
+    h4 {
         font-size: 1.25rem;
     }
-    .modal .modalContent {
-        margin: 2.5rem;
+    .about p, .about ul, .skills p {
+        font-size: 1.25rem;
+    }
+    .skill {
+        width: 175px;
+    }
+    .project {
+        display: inline-block;
+        width: 23rem;
+    }
+    .slideshowNav {
+        transform: translate(50%, 125%);
+    }
+    .slide .caption {
+        min-width: 70vw;
+        transform: translate(-50%, -150%);
+    }
+    .baCompare button {
+        margin: 0.5rem;
+        padding: 1rem 1.5rem;
+        opacity: 0.6;
     }
 }
 
+/* large devices */
+@media (min-width: 992px) {
+    section, .image {
+        margin: 1rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+    .project {
+        display: inline-block;
+        width: 28rem;
+    }
+    .project:hover {
+        animation: projectHover 0.1s forwards;
+    }
+    .modal .modalContent {
+        margin: 6rem;
+    }
+    .image .instructions {
+        padding: 0.25rem 0.75rem;
+    }
+    .modalExitButton, .slideCounterContainer, .slideshowButton {
+        opacity: 0.6;
+    }
+    .slide .caption {
+        min-width: auto;
+        transform: translate(-50%, -150%);
+    }
+    .slide .tallImg {
+        max-height: 75vh;
+    }
+    .baCompare button {
+        font-size: 1.25rem;
+    }
+}
+
+/* extra large devices */
+@media (min-width: 1200px) {
+    .modal .modalContent {
+        margin: 8rem;
+    }
+    .slideshowNav {
+        transform: translate(50%, -15%);
+    }
+    .slide .caption {
+        min-width: auto;
+        transform: translate(-50%, 15%);
+        font-size: 1.15rem;
+    }
+}
 
 /* animations */
 @keyframes fade {

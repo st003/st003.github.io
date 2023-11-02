@@ -7,6 +7,7 @@ const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="1
 
 // modal logic
 function openModal(modalID) {
+    document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
     const modal = document.getElementById(modalID);
     const modalContent = modal.getElementsByClassName('modalContent').item(0);
 
@@ -20,6 +21,7 @@ function openModal(modalID) {
     modal.style.display = 'flex';
 
     function closeModal(modalID) {
+        document.getElementsByTagName('body')[0].style.overflowY = 'auto';
         document.getElementById(modalID).style.display = 'none';
         document.getElementsByClassName('modalExitButton').item(0).remove();
     }
