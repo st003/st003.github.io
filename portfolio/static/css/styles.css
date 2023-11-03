@@ -263,19 +263,19 @@ section {
     z-index: 50;
     min-width: 80vw;
     transform: translate(-50%, -200%);
-    padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+    padding: 1rem 0.75rem 0.75rem 0.75rem;
     border-radius: 0.25rem;
     background-color: rgba(34, 34, 34, 0.7);
     text-align: center;
     color: var(--light-text);
     font-size: 1rem;
-    line-height: 1.5;
 }
 .slide img {
     width: 100%;
 }
 .slide .tallImg {
     max-height: 70vh;
+    overflow-y: scroll;
 }
 .slideshowNav {
     display: flex;
@@ -420,9 +420,6 @@ section {
     .slide .caption {
         min-width: 40vw;
         transform: translate(-50%, -50%);
-    }
-    .slide .tallImg {
-        overflow-y: scroll;
     }
 }
 
