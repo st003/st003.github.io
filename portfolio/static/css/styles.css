@@ -14,7 +14,7 @@ body {
     margin: 0;
     font-family: Helvetica;
     color: var(--dark-text);
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 header {
@@ -67,7 +67,7 @@ footer a {
     font-weight: 700;
 }
 footer a:hover {
-    color: var(--primart-color);
+    color: var(--primary-color);
 }
 footer span {
     margin: 0 0.25rem;
@@ -219,8 +219,7 @@ section {
 }
 .modal .modalContent {
     position: relative;
-    margin: 2.5rem;
-    border: 2px solid var(--neutral-color);
+    max-width: 75%;
     animation: modalExpand 0.3s;
 }
 .modalExitButton {
@@ -253,8 +252,8 @@ section {
     position: relative;
 }
 .slide {
-    position: relative;
     display: none;
+    position: relative;
 }
 .slide .caption {
     position: absolute;
@@ -263,7 +262,7 @@ section {
     z-index: 50;
     min-width: 80vw;
     transform: translate(-50%, -175%);
-    padding: 1rem 0.75rem 0.75rem 0.75rem;
+    padding: 0.75rem 0.5rem 0.5rem 0.5rem;
     border-radius: 0.25rem;
     background-color: rgba(34, 34, 34, 0.7);
     text-align: center;
@@ -272,10 +271,14 @@ section {
 }
 .slide img {
     width: 100%;
+    border: 2px solid var(--neutral-color);
 }
 .slide .tallImg {
-    max-height: 70vh;
+    max-height: 55vh;
     overflow-y: scroll;
+}
+.slide .tallImg img {
+    width: calc(100% - 4px);
 }
 .slideshowNav {
     display: flex;
@@ -293,7 +296,7 @@ section {
 }
 .slideCounterContainer {
     display: flex;
-    height: 58.4px; /* Why does 100% not work here? */
+    height: 58.4px; /* TODO - Why does 100% not work here? */
     margin: 0 0.5rem;
     align-items: center;
     opacity: 0.8;
@@ -325,7 +328,8 @@ section {
     position: absolute;
     bottom: 0;
     z-index: 25;
-    margin: 0.25rem;
+    margin-bottom: 0.85rem;
+    margin-left: 0.25rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
     font-size: 1rem;
@@ -414,12 +418,19 @@ section {
         margin-left: 0.5rem;
         font-size: 1.5rem;
     }
+    .slide .tallImg {
+        max-height: 70vh;
+    }
     .slideshowNav {
         transform: translate(50%, 50%);
     }
     .slide .caption {
         min-width: 40vw;
         transform: translate(-50%, -50%);
+    }
+    .baCompare button {
+        margin-bottom: 0.8rem;
+        padding: 0.5rem 0.75rem;
     }
 }
 
@@ -441,17 +452,20 @@ section {
         display: inline-block;
         width: 23rem;
     }
+    .modal .modalContent {
+        max-width: 85%;
+    }
     .slideshowNav {
         transform: translate(50%, 125%);
     }
     .slide .caption {
-        min-width: 70vw;
         transform: translate(-50%, -150%);
+        min-width: 70vw;
+        padding: 1rem 0.75rem 0.75rem 0.75rem;
     }
     .baCompare button {
-        margin: 0.5rem;
-        padding: 1rem 1.5rem;
-        opacity: 0.6;
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
     }
 }
 
@@ -470,14 +484,8 @@ section {
     .project:hover {
         animation: projectHover 0.1s forwards;
     }
-    .modal .modalContent {
-        margin: 6rem;
-    }
     .image .instructions {
         padding: 0.25rem 0.75rem;
-    }
-    .modalExitButton, .slideCounterContainer, .slideshowButton {
-        opacity: 0.6;
     }
     .slide .caption {
         min-width: auto;
@@ -487,22 +495,23 @@ section {
         max-height: 75vh;
     }
     .baCompare button {
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
         font-size: 1.25rem;
     }
 }
 
 /* extra large devices */
 @media (min-width: 1200px) {
-    .modal .modalContent {
-        margin: 8rem;
-    }
     .slideshowNav {
-        transform: translate(50%, -15%);
+        transform: translate(50%, -25%);
     }
     .slide .caption {
-        min-width: auto;
         transform: translate(-50%, 15%);
         font-size: 1.15rem;
+    }
+    .slide .tallImg {
+        max-height: 85vh;
     }
 }
 
