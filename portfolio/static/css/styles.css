@@ -11,10 +11,17 @@ html {
     font-size: 0.95rem;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     font-family: Helvetica;
     color: var(--dark-text);
     line-height: 1.5;
+}
+
+.contentContainer {
+    flex-grow: 1;
 }
 
 header {
