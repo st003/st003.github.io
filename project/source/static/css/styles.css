@@ -1,14 +1,15 @@
 :root {
-    --primary-color: #222222;
+    --primary-color: #333;
     --secondary-color: #008000;
-    --neutral-color: #EEEEEE;
-    --box-shadow-color: #CCCCCC;
-    --dark-text: #222222;
+    --neutral-color: #EEE;
+    --box-shadow-color: #CCC;
+    --dark-text: #222;
     --light-text: white;
 }
 
 html {
     font-size: 0.95rem;
+    scroll-behavior: smooth;
 }
 body {
     display: flex;
@@ -111,21 +112,76 @@ section {
     padding: 0.75rem;
 }
 
+.homeContainer {
+    background-color: var(--primary-color);
+}
+.homeContainer h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.homeTitle {
+    padding: 2rem;
+    color: var(--light-text);
+    text-align: center;
+    animation: fade 1.25s forwards;
+}
+.homeTitle h1 {
+    font-size: 3rem;
+}
+.homeTitle h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    animation-delay: 0;
+}
+.homeTitle .socialMedia a {
+    padding: 0 0.5rem;
+    color: var(--light-text);
+    font-size: 2rem;
+}
+.homeTitle .socialMedia a:hover {
+    color: var(--secondary-color);
+}
+.homeTitle hr {
+    width: 50%;
+    height: 0.25rem;
+    background-color: var(--light-text);
+}
+
+.homeTitle nav {
+    margin-top: 1rem;
+}
+.homeTitle nav a {
+    padding: 0 0.5rem;
+    color: var(--light-text);
+    font-size: 1.5rem;
+}
+.homeTitle nav a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+#about, #tech, #projects {
+    opacity: 0;
+    text-decoration: underline;
+}
 .about, .skills, .projects, .image img {
     opacity: 0;
     background-color: var(--neutral-color);
-    box-shadow: 0px 2px 12px 0px var(--box-shadow-color);
 }
 .about p, .about ul {
     font-size: 1.15rem;
 }
-.about, .skills, .projects, .image img, .image .instructions {
+#about, .about, #tech, .skills, #projects, .projects, .image img, .image .instructions {
     animation: fade 1.25s forwards;
 }
-.skills, .image img, .image .instructions {
+#tech, .skills, .image img, .image .instructions {
     animation-delay: 0.35s;
 }
-.projects {
+#projects, .projects {
     animation-delay: 0.7s;
 }
 
