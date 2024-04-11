@@ -105,14 +105,12 @@ ul {
 a {
     text-decoration: none;
 }
-section, .image {
-    margin: 0.75rem;
-}
 section {
     padding: 0.75rem;
 }
 
 .homeContainer {
+    padding: 0.75rem;
     background-color: var(--primary-color);
 }
 .homeContainer h2 {
@@ -129,12 +127,12 @@ section {
     animation: fade 1.25s forwards;
 }
 .homeTitle h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .homeTitle h2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    animation-delay: 0;
+    font-size: 1.5rem;
 }
 .homeTitle .socialMedia a {
     padding: 0 0.5rem;
@@ -156,12 +154,11 @@ section {
 .homeTitle nav a {
     padding: 0 0.5rem;
     color: var(--light-text);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .homeTitle nav a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
-    font-weight: 700;
 }
 
 #about, #tech, #projects {
@@ -178,14 +175,17 @@ section {
 #about, .about, #tech, .skills, #projects, .projects, .image img, .image .instructions {
     animation: fade 1.25s forwards;
 }
-#tech, .skills, .image img, .image .instructions {
+#about, .about {
     animation-delay: 0.35s;
 }
-#projects, .projects {
+#tech, .skills, .image img, .image .instructions {
     animation-delay: 0.7s;
 }
+#projects, .projects {
+    animation-delay: 1.0s;
+}
 
-.skills-container {
+.skillsContainer {
     display: flex;
     flex-wrap: wrap;
 }
@@ -203,7 +203,7 @@ section {
     font-size: 1rem;
 }
 
-.project-container {
+.projectContainer {
     display: flex;
     flex-wrap: wrap;
 }
@@ -228,6 +228,10 @@ section {
 }
 .project a:active {
     background-color: rgba(0, 128, 0, 0.8);
+}
+
+.projectPageContainer {
+    padding: 0.75rem;
 }
 .project h3 {
     padding: 0.75rem 0.75rem 0.25rem 0.75rem;
@@ -505,6 +509,18 @@ section {
     h4 {
         font-size: 1.25rem;
     }
+    .homeTitle h1 {
+        font-size: 3rem;
+    }
+    .homeTitle h2 {
+        font-size: 2.25rem;
+    }
+    .homeTitle hr {
+        width: 33%;
+    }
+    .homeTitle nav a {
+        font-size: 1.5rem;
+    }
     .about p, .about ul, .skills p {
         font-size: 1.25rem;
     }
@@ -534,8 +550,8 @@ section {
 
 /* large devices */
 @media (min-width: 992px) {
-    section, .image {
-        margin: 1rem;
+    .homeContainer, .projectPageContainer {
+        padding: 1rem;
     }
     section {
         padding: 1.5rem;
