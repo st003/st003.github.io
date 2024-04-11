@@ -114,14 +114,14 @@ section {
     background-color: var(--primary-color);
 }
 .homeContainer h2 {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     color: var(--light-text);
     text-align: center;
 }
 
 .homeTitle {
-    padding: 2rem;
+    padding: 1.5rem;
     color: var(--light-text);
     text-align: center;
     animation: fade 1.25s forwards;
@@ -517,6 +517,15 @@ section {
     h4 {
         font-size: 1.25rem;
     }
+    .homeContainer {
+        padding: 2rem;
+    }
+    .homeContainer h2 {
+        margin-top: 2.5rem;
+    }
+    .homeTitle {
+        padding: 2rem;
+    }
     .homeTitle h1 {
         font-size: 3rem;
     }
@@ -558,7 +567,10 @@ section {
 
 /* large devices */
 @media (min-width: 992px) {
-    .homeContainer, .projectPageContainer {
+    .homeContainer h2 {
+        margin-top: 3rem;
+    }
+    .projectPageContainer {
         padding: 1rem;
     }
     section {
