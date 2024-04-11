@@ -188,11 +188,15 @@ section {
 .skillsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .skill {
     width: 125px;
-    padding: 0;
-    margin-right: 2.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+.skill .icon {
+    font-size: 3.5rem;
 }
 .skill h3 {
     margin-top: 0.5rem;
@@ -200,12 +204,15 @@ section {
 }
 .skill ul {
     margin-top: 0.5rem;
+    padding-left: 0;
+    list-style-type: none;
     font-size: 1rem;
 }
 
 .projectContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .project {
     display: block;
@@ -244,6 +251,7 @@ section {
 
 .image {
     position: relative;
+    margin-top: 0.75rem;
     padding: 0;
 }
 .image:hover {
@@ -562,6 +570,9 @@ section {
     }
     .project:hover {
         animation: projectHover 0.1s forwards;
+    }
+    .image {
+        margin-top: 1rem;
     }
     .image .instructions {
         padding: 0.25rem 0.75rem;
