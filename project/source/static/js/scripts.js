@@ -123,4 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // configure Xslideshows
+    if (document.getElementsByClassName('XslideShowContainer')) {
+
+        let currentSlide = 0;
+        const buttons    = document.getElementsByClassName('XslideShowButton');
+        const slides     = document.getElementsByClassName('XslideShowContent');
+
+        buttons[0].addEventListener('click', () => {
+            currentSlide = (currentSlide > 0) ? (currentSlide - 1) : slides.length - 1;
+            for (let i = 0; i < slides.length; i++) {
+                if (i === currentSlide) slides[i].classList.add('active');
+                else slides[i].classList.remove('active');
+            }
+        });
+
+        buttons[1].addEventListener('click', () => {
+            currentSlide = (currentSlide < slides.length - 1) ? (currentSlide + 1) : 0;
+            for (let i = 0; i < slides.length; i++) {
+                if (i === currentSlide) slides[i].classList.add('active');
+                else slides[i].classList.remove('active');
+            }
+        });
+    }
+
 });
