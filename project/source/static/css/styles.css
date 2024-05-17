@@ -327,6 +327,9 @@ section {
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+    opacity: 0;
+    animation: fade 1.25s forwards;
+    animation-delay: 0.7s;
 }
 .XslideShowButton {
     padding: 0 1rem;
@@ -348,14 +351,13 @@ section {
 .XslideShowContent {
     display: none;
     flex-direction: column;
-    max-height: 500px;
+    max-height: 300px;
 }
 .XslideShowContent.active {
     display: flex;
 }
 .XslideShowImgContainer {
     overflow-y: scroll;
-    margin-bottom: 0.5rem;
 }
 .XslideShowImgContainer img {
     width: 100%;
@@ -364,6 +366,7 @@ section {
     width: 100%;
 }
 .XslideShowCaption {
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
     background-color: var(--neutral-color);
 }
@@ -610,6 +613,9 @@ section {
         margin-left: 0.5rem;
     }
 
+    .XslideShowContent {
+        max-height: 500px;
+    }
     .XslideShowImgContainer img.mobile {
         width: auto;
         border: 1px solid var(--primary-color);
@@ -663,7 +669,8 @@ section {
         max-height: 700px;
     }
     .XslideShowCaption {
-        padding: 1rem;
+        padding: 0.75rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -678,6 +685,9 @@ section {
     }
     .slide .tallImg {
         max-height: 85vh;
+    }
+    .XslideShowContent {
+        max-height: 800px;
     }
 }
 
