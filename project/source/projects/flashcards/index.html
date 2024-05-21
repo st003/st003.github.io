@@ -12,40 +12,47 @@
         <p><a href="https://github.com/st003/flashcards" target="_blank">https://github.com/st003/flashcards</a></p>
     </section>
 
-    <section class="image" onclick="openModal('imgModal')">
-        <span class="instructions">Click the image to open slide show</span>
-        <img src="{% path static/img/flashcards/filters.png %}" alt="filters">
-    </section>
-
-    <div id="imgModal" class="modal">
-        <div class="modalContent">
-            <div id="slideshow" class="slideshow">
-                <div class="slide">
-                    <div class="caption">Getting started page</div>
+    <div class="XslideShowContainer">
+        <button class="XslideShowButton">&#10094;</button>
+        <div class="XslideShowContentContainer">
+            <div class="XslideShowContent active">
+                <div class="XslideShowCaption">Getting started page</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/get-started.png %}" alt="get started">
                 </div>
-                <div class="slide">
-                    <div class="caption">English word first</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">English word first</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/en.png %}" alt="english word">
                 </div>
-                <div class="slide">
-                    <div class="caption">Request the translation on demand</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Request the translation on demand</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/jp.png %}" alt="translation">
                 </div>
-                <div class="slide">
-                    <div class="caption">Words can be filtered by topic and category</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Words can be filtered by topic and category</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/filters.png %}" alt="filters">
                 </div>
-                <div class="slide">
-                    <div class="caption">The Django admin is used to create new cards and topics</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">The Django admin is used to create new cards and topics</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/admin-words.png %}" alt="django admin words">
                 </div>
-                <div class="slide">
-                    <div class="caption">Words can belong to multiple topics</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Words can belong to multiple topics</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/flashcards/admin-word.png %}" alt="django admin word">
                 </div>
             </div>
         </div>
+        <button class="XslideShowButton">&#10095</button>
     </div>
 {% endblock %}
 
