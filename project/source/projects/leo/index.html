@@ -12,28 +12,23 @@
         <p>This project is not open source</p>
     </section>
 
-    <section class="image" onclick="openModal('imgModal')">
-        <span class="instructions">Click the image to open slide show</span>
-        <img src="{% path static/img/leo/home-01-crop.png %}" alt="home page">
-    </section>
-
-    <div id="imgModal" class="modal">
-        <div class="modalContent">
-            <div id="slideshow" class="slideshow">
-                <div class="slide">
-                    <div class="caption">Home Page</div>
-                    <div class="tallImg">
-                        <img  src="{% path static/img/leo/home-01.png %}" alt="home page">
-                    </div>
+    <div class="XslideShowContainer">
+        <button class="XslideShowButton">&#10094;</button>
+        <div class="XslideShowContentContainer">
+            <div class="XslideShowContent active">
+                <div class="XslideShowCaption">Home Page</div>
+                <div class="XslideShowImgContainer">
+                    <img src="{% path static/img/leo/home-01.png %}" alt="home page">
                 </div>
-                <div class="slide">
-                    <div class="caption">Home Page (Phone)</div>
-                    <div class="tallImg">
-                        <img src="{% path static/img/leo/home-02.png %}" alt="home page phone">
-                    </div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Home Page (phone)</div>
+                <div class="XslideShowImgContainer">
+                    <img class="mobile" src="{% path static/img/leo/home-02.png %}" alt="home page phone">
                 </div>
             </div>
         </div>
+        <button class="XslideShowButton">&#10095</button>
     </div>
 {% endblock %}
 
