@@ -13,88 +13,107 @@
         <p><a href="https://github.com/st003/CS50w-Final-Project" target="_blank">https://github.com/st003/CS50w-Final-Project</a></p>
     </section>
 
-    <section class="image" onclick="openModal('imgModal')">
-        <span class="instructions">Click the image to open slide show</span>
-        <img src="{% path static/img/ecom/home-01.png %}" alt="home">
-    </section>
-
-    <div id="imgModal" class="modal">
-        <div class="modalContent">
-            <div id="slideshow" class="slideshow">
-                <div class="slide">
-                    <div class="caption">Browse available software subscriptions</div>
-                    <img src="{% path static/img/ecom/home-01.png %}" alt="home">
+    <div class="XslideShowContainer">
+        <button class="XslideShowButton">&#10094;</button>
+        <div class="XslideShowContentContainer">
+            <div class="XslideShowContent active">
+                <div class="XslideShowCaption">Browse available software subscriptions</div>
+                <div class="XslideShowImgContainer">
+                    <img src="{% path static/img/ecom/home-01.png %}" alt="home page">
                 </div>
-                <div class="slide">
-                    <div class="caption">Browse available software subscriptions (Phone)</div>
-                    <div class="tallImg">
-                        <img src="{% path static/img/ecom/home-02.png %}" alt="home mobile">
-                    </div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Browse available software subscriptions (Phone)</div>
+                <div class="XslideShowImgContainer">
+                    <img class="mobile" src="{% path static/img/ecom/home-02.png %}" alt="home page phone">
                 </div>
-                <div class="slide">
-                    <div class="caption">New customers register for an account</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">New customers register for an account</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/register-01.png %}" alt="register">
                 </div>
-                <div class="slide">
-                    <div class="caption">Add subscriptions to your cart</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Add subscriptions to your cart</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/shop-01.png %}" alt="shop">
                 </div>
-                <div class="slide">
-                    <div class="caption">Add subscriptions to your cart (Phone)</div>
-                    <div class="tallImg">
-                        <img src="{% path static/img/ecom/shop-02.png %}" alt="shop mobile">
-                    </div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Add subscriptions to your cart (Phone)</div>
+                <div class="XslideShowImgContainer">
+                    <img class="mobile" src="{% path static/img/ecom/shop-02.png %}" alt="shop phone">
                 </div>
-                <div class="slide">
-                    <div class="caption">See more details on the subscriptions for sale</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">See more details on the subscriptions for sale</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/item-01.png %}" alt="item page">
                 </div>
-                <div class="slide">
-                    <div class="caption">See more details on the subscriptions for sale (Phone)</div>
-                    <div class="tallImg">
-                        <img src="{% path static/img/ecom/item-02.png %}" alt="item page mobile">
-                    </div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">See more details on the subscriptions for sale (Phone)</div>
+                <div class="XslideShowImgContainer">
+                    <img class="mobile" src="{% path static/img/ecom/item-02.png %}" alt="item page phone">
                 </div>
-                <div class="slide">
-                    <div class="caption">Add subscriptions to your cart</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Add subscriptions to your cart</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/cart-01.png %}" alt="cart">
                 </div>
-                <div class="slide">
-                    <div class="caption">Customers may add additional non-purchasing users,</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Customers may add additional non-purchasing users...</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/users-01.png %}" alt="customer users">
                 </div>
-                <div class="slide">
-                    <div class="caption">and assign subscription licenses to them</div>
-                    <div class="tallImg">
-                        <img src="{% path static/img/ecom/assign-01.png %}" alt="assign license">
-                    </div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">...and assign subscription licenses to them</div>
+                <div class="XslideShowImgContainer">
+                    <img src="{% path static/img/ecom/assign-01.png %}" alt="assign license">
                 </div>
-                <div class="slide">
-                    <div class="caption">Review your purchase history</div>
-                    <img  src="{% path static/img/ecom/history-01.png %}" alt="purchase history">
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Review your purchase history</div>
+                <div class="XslideShowImgContainer">
+                    <img src="{% path static/img/ecom/history-01.png %}" alt="purchase history">
                 </div>
-                <div class="slide">
-                    <div class="caption">Merchant administrators can manage products,</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Merchant administrators can manage products...</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/products-01.png %}" alt="products">
                 </div>
-                <div class="slide">
-                    <div class="caption">customers,</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">customers...</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/user-admin-01.png %}" alt="customers">
                 </div>
-                <div class="slide">
-                    <div class="caption">and transactions</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">...and transactions</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/reports-01.png %}" alt="reporting">
                 </div>
-                <div class="slide">
-                    <div class="caption">Aditionally, the Django admin is available...</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">Additionally, the Django admin is available...</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/admin-01.png %}" alt="django admin 1">
                 </div>
-                <div class="slide">
-                    <div class="caption">..for more detailed database administration</div>
+            </div>
+            <div class="XslideShowContent">
+                <div class="XslideShowCaption">...for more detailed database administration</div>
+                <div class="XslideShowImgContainer">
                     <img src="{% path static/img/ecom/admin-02.png %}" alt="django admin 2">
                 </div>
             </div>
         </div>
+        <button class="XslideShowButton">&#10095</button>
     </div>
 {% endblock %}
 
