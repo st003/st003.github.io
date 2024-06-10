@@ -270,12 +270,13 @@ section {
     animation: fade 1.25s forwards;
     animation-delay: 0.7s;
 }
-.XslideShowButton {
+.XslideShowButton, .beforeAfterToggle {
     padding: 0 1rem;
     background-color: var(--secondary-color);
     border: none;
     border-radius: 0.25rem;
     color: var(--light-text);
+    cursor: pointer;
 }
 .XslideShowButton:hover {
     opacity: 0.7;
@@ -289,15 +290,31 @@ section {
 }
 .XslideShowContent {
     display: none;
+    position: relative;
     flex-direction: column;
     max-height: 300px;
 }
 .XslideShowContent.active {
     display: flex;
 }
+.XslideShowContent .beforeAfterToggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+    opacity: 0.7;
+    background-color: var(--secondary-color);
+    font-size: 1rem;
+}
+.XslideShowCaption {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--neutral-color);
+}
 .XslideShowImgContainer {
     overflow-y: scroll;
 }
+
 .XslideShowImgContainer .before {
     display: none;
 }
@@ -306,11 +323,6 @@ section {
 }
 .XslideShowImgContainer img.mobile {
     width: 100%;
-}
-.XslideShowCaption {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    background-color: var(--neutral-color);
 }
 
 /* PROJECTS */
@@ -483,6 +495,9 @@ section {
     }
     .XslideShowContent {
         max-height: 700px;
+    }
+    .XslideShowContent .beforeAfterToggle {
+        padding: 1rem;
     }
     .XslideShowCaption {
         padding: 0.75rem;

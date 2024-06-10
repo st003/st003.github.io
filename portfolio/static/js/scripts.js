@@ -5,17 +5,22 @@ const closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 
 const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>'
 
-function beforeAfter(baCompareID) {
-    const baCompare = document.getElementById(baCompareID);
-    const beforeImg = baCompare.getElementsByClassName('before').item(0);
-    const baToggle  = baCompare.getElementsByTagName('button').item(0);
 
-    if (!beforeImg.style.display || beforeImg.style.display == 'none') {
-        beforeImg.style.display = 'block';
-        baToggle.innerHTML = 'Show After';
+function toggleBeforeAfter(element) {
+
+    const imgs   = element.parentElement.getElementsByClassName('XslideShowImgContainer')[0].getElementsByTagName('img');
+    console.log(imgs)
+    const before = imgs.item(0);
+    const after  = imgs.item(1);
+
+    if (!before.style.display || before.style.display == 'none') {
+        before.style.display = 'inline';
+        after.style.display = 'none';
+        element.innerHTML = 'Show New';
     } else {
-        beforeImg.style.display = 'none';
-        baToggle.innerHTML = 'Show Before';
+        before.style.display = 'none';
+        after.style.display = 'inline';
+        element.innerHTML = 'Show Old';
     }
 }
 
