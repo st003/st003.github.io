@@ -11,10 +11,6 @@ MacOS/Linux:
 ./build.sh
 ```
 
-## Running the tests
-
-There are no tests at this time
-
 ## Deployment
 
 This repo is setup to gracefully deploy to GitHub pages. To deploy elsewhere, copy the contents of the portfolio folder to a static file server.
