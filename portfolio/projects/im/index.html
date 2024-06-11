@@ -40,28 +40,29 @@
         <p><a href="https://github.com/st003/CS50w-project2" target="_blank">https://github.com/st003/CS50w-project2</a></p>
     </section>
 
-    <section class="image" onclick="openModal('imgModal')">
-        <span class="instructions">Click the image to open slide show</span>
-        <img src="../../static/img/im/channel.png" alt="channel">
-    </section>
-
-    <div id="imgModal" class="modal">
-        <div class="modalContent">
-            <div id="slideshow" class="slideshow">
-                <div class="slide">
-                    <div class="caption">Enter your screen name to start chatting</div>
+    <div class="slideShowContainer">
+        <button class="slideShowButton">&#10094;</button>
+        <div class="slideShowContentContainer">
+            <div class="slideShowContent active">
+                <div class="slideShowCaption">Enter your screen name to start chatting</div>
+                <div class="slideShowImgContainer">
                     <img src="../../static/img/im/register.png" alt="register">
                 </div>
-                <div class="slide">
-                    <div class="caption">Chat in a group or send a direct message</div>
+            </div>
+            <div class="slideShowContent">
+                <div class="slideShowCaption">Chat in a group or send a direct message</div>
+                <div class="slideShowImgContainer">
                     <img src="../../static/img/im/home.png" alt="home">
                 </div>
-                <div class="slide">
-                    <div class="caption">Websockets are used to provide push notifications</div>
+            </div>
+            <div class="slideShowContent">
+                <div class="slideShowCaption">Websockets are used to provide push notifications</div>
+                <div class="slideShowImgContainer">
                     <img src="../../static/img/im/channel.png" alt="channel">
                 </div>
             </div>
         </div>
+        <button class="slideShowButton">&#10095</button>
     </div>
             </main>
         </div>
