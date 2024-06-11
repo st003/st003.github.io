@@ -27,12 +27,12 @@ function toggleBeforeAfter(element) {
 /* EVENT LISTENERS */
 document.addEventListener('DOMContentLoaded', () => {
 
-    // configure Xslideshows
-    if (document.getElementsByClassName('XslideShowContainer')) {
+    // configure slide shows
+    if (document.getElementsByClassName('slideShowContainer')) {
 
         let currentSlide = 0;
-        const buttons    = document.getElementsByClassName('XslideShowButton');
-        const slides     = document.getElementsByClassName('XslideShowContent');
+        const buttons    = document.getElementsByClassName('slideShowButton');
+        const slides     = document.getElementsByClassName('slideShowContent');
 
         buttons[0].addEventListener('click', () => {
             currentSlide = (currentSlide > 0) ? (currentSlide - 1) : slides.length - 1;

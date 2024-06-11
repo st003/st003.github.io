@@ -262,7 +262,7 @@ section {
 }
 
 /* slideshow */
-.XslideShowContainer {
+.slideShowContainer {
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
@@ -270,7 +270,7 @@ section {
     animation: fade 1.25s forwards;
     animation-delay: 0.7s;
 }
-.XslideShowButton, .beforeAfterToggle {
+.slideShowButton, .beforeAfterToggle {
     padding: 0 1rem;
     background-color: var(--secondary-color);
     border: none;
@@ -278,26 +278,26 @@ section {
     color: var(--light-text);
     cursor: pointer;
 }
-.XslideShowButton:hover {
+.slideShowButton:hover {
     opacity: 0.7;
     cursor: pointer;
     color: var(--dark-text);
 }
-.XslideShowContentContainer {
+.slideShowContentContainer {
     flex-grow: 1;
     margin: 0 0.5rem;
     text-align: center;
 }
-.XslideShowContent {
+.slideShowContent {
     display: none;
     position: relative;
     flex-direction: column;
     max-height: 300px;
 }
-.XslideShowContent.active {
+.slideShowContent.active {
     display: flex;
 }
-.XslideShowContent .beforeAfterToggle {
+.slideShowContent .beforeAfterToggle {
     position: absolute;
     left: 0;
     top: 0;
@@ -306,22 +306,22 @@ section {
     background-color: var(--secondary-color);
     font-size: 1rem;
 }
-.XslideShowCaption {
+.slideShowCaption {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     background-color: var(--neutral-color);
 }
-.XslideShowImgContainer {
+.slideShowImgContainer {
     overflow-y: scroll;
 }
 
-.XslideShowImgContainer .before {
+.slideShowImgContainer .before {
     display: none;
 }
-.XslideShowImgContainer img {
+.slideShowImgContainer img {
     width: 100%;
 }
-.XslideShowImgContainer img.mobile {
+.slideShowImgContainer img.mobile {
     width: 100%;
 }
 
@@ -456,10 +456,10 @@ section {
         transform: translate(50%, 125%);
     }
 
-    .XslideShowContent {
+    .slideShowContent {
         max-height: 500px;
     }
-    .XslideShowImgContainer img.mobile {
+    .slideShowImgContainer img.mobile {
         width: auto;
         border: 1px solid var(--primary-color);
     }
@@ -487,19 +487,19 @@ section {
         margin-top: 1rem;
     }
 
-    .XslideShowButton {
+    .slideShowButton {
         padding: 0 1.5rem;
     }
-    .XslideShowContentContainer {
+    .slideShowContentContainer {
         margin: 0 1rem;
     }
-    .XslideShowContent {
+    .slideShowContent {
         max-height: 700px;
     }
-    .XslideShowContent .beforeAfterToggle {
+    .slideShowContent .beforeAfterToggle {
         padding: 1rem;
     }
-    .XslideShowCaption {
+    .slideShowCaption {
         padding: 0.75rem;
         font-size: 1.25rem;
     }
@@ -510,7 +510,7 @@ section {
     .slideshowNav {
         transform: translate(50%, -25%);
     }
-    .XslideShowContent {
+    .slideShowContent {
         max-height: 800px;
     }
 }
