@@ -359,6 +359,10 @@ section {
     background-image: url("../img/olp/dashboard-01.png");
     background-position: center;
 }
+#ils {
+    background-image: url("../img/ils/airplane-icon.png");
+    background-position: center;
+}
 #trivia {
     background-image: url("../img/kt/analytics-01-crop.png");
     background-position: center;

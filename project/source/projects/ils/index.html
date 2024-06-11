@@ -1,0 +1,28 @@
+{% layout project %}
+
+{% block main %}
+    <section class="about">
+        <h2>Aviation Learning Management System (LMS)</h2>
+        <p>A proprietary Java-based Learning Management System designed for delivering web-based TSA regulatory training to airport employees. This software has been used by over 100,000 airport employees in more than 60 FAR-139 airports around the United States including: Los Angeles International Airport (LAX), Dallas Fort Worth International Airport (DFW), Fort Lauderdale-Hollywood International Airport (FLL).</p>
+        <p>I was part of a team of developers on this project and over the course of a decade: designed, developed, and shipped numerous enhancements. Notable contributions as a developer and designer include:</p>
+        <ul>
+            <li>A complete rewrite of the user interface HTML &amp; CSS, including adding full mobile device support</li>
+            <li>Designed a B2C E-commerce interface</li>
+            <li>Designed a simple course compiler</li>
+            <li>Designed a location-based authorization system</li>
+            <li>Wrote developer REST API documentation</li>
+        </ul>
+        <h4>My Role</h4>
+        <p>Frontend Developer, Designer, QA</p>
+        <h4>Technology</h4>
+        <p>Java, JavaScript, HTML5, CSS3, JSP, Bootstrap 4, Microsoft SQL Server, Apache Tomcat</p>
+        <h4>Source Code</h4>
+        <p>This project is not open source. More information about this application can be made available upon request.</p>
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <a href="{% path projects/olp/index.html %}">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="{% path projects/kt/index.html %}">Next &#10095;</a>
+{% endblock %}
