@@ -52,12 +52,11 @@
     </section>
 
     <div class="slideShowContainer">
-        <button class="slideShowButton">&#10094;</button>
         <div class="slideShowContentContainer">
             <div class="slideShowContent active">
                 <div class="slideShowCaption">Each user has a unique login</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/login-01b.png" alt="old login page">
                     <img class="after" src="../../static/img/olp/login-01a.png" alt="redesigned login page">
                 </div>
@@ -70,8 +69,8 @@
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">The training catalog can be customized per user</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/my-courses-01b.png" alt="old my courses page">
                     <img class="after" src="../../static/img/olp/my-courses-01a.png" alt="redesigned my courses page">
                 </div>
@@ -90,8 +89,8 @@
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Reporting for managers and administrators</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/records-01b.png" alt="old reports page">
                     <img class="after" src="../../static/img/olp/records-01a.png" alt="redesigned reports page">
                 </div>
@@ -104,8 +103,8 @@
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Support for user profile management</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/new-user-01b.png" alt="old new user page">
                     <img class="after" src="../../static/img/olp/new-user-01a.png" alt="redesigned new user page">
                 </div>
@@ -118,22 +117,28 @@
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Customize course configurations...</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/new-course-01b.png" alt="old new course page">
                     <img class="after" src="../../static/img/olp/new-course-01a.png" alt="redesigned new course page">
                 </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">And global system configurations</div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Old</button>
                 <div class="slideShowImgContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
                     <img class="before" src="../../static/img/olp/system-management-01b.png" alt="old system management page">
                     <img class="after" src="../../static/img/olp/system-management-01a.png" alt="redesigned system management page">
                 </div>
             </div>
         </div>
-        <button class="slideShowButton">&#10095</button>
+        <div class="slideShowControls">
+            <button class="slideShowButton prev">&#10094;</button>
+            <div class="slideShowControlOptions">
+                <div class="slideShowCounter"></div>
+            </div>
+            <button class="slideShowButton next">&#10095;</button>
+        </div>
     </div>
             </main>
         </div>

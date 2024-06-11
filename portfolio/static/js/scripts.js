@@ -8,19 +8,18 @@ const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="1
 
 function toggleBeforeAfter(element) {
 
-    const imgs   = element.parentElement.getElementsByClassName('XslideShowImgContainer')[0].getElementsByTagName('img');
-    console.log(imgs)
+    const imgs   = element.parentElement.getElementsByTagName('img');
     const before = imgs.item(0);
     const after  = imgs.item(1);
 
     if (!before.style.display || before.style.display == 'none') {
         before.style.display = 'inline';
-        after.style.display = 'none';
-        element.innerHTML = 'Show New';
+        after.style.display  = 'none';
+        element.innerHTML    = 'Show After';
     } else {
         before.style.display = 'none';
-        after.style.display = 'inline';
-        element.innerHTML = 'Show Old';
+        after.style.display  = 'inline';
+        element.innerHTML    = 'Show Before';
     }
 }
 
@@ -28,11 +27,15 @@ function toggleBeforeAfter(element) {
 document.addEventListener('DOMContentLoaded', () => {
 
     // configure slide shows
-    if (document.getElementsByClassName('slideShowContainer')) {
+    if (document.getElementsByClassName('slideShowContainer').length) {
 
         let currentSlide = 0;
         const buttons    = document.getElementsByClassName('slideShowButton');
         const slides     = document.getElementsByClassName('slideShowContent');
+        const counter    = document.getElementsByClassName('slideShowCounter')[0];
+
+        counter.innerHTML = `1/${slides.length}`;
+
 
         buttons[0].addEventListener('click', () => {
             currentSlide = (currentSlide > 0) ? (currentSlide - 1) : slides.length - 1;
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (i === currentSlide) slides[i].classList.add('active');
                 else slides[i].classList.remove('active');
             }
+            counter.innerHTML = `${currentSlide + 1}/${slides.length}`;
         });
 
         buttons[1].addEventListener('click', () => {
@@ -48,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (i === currentSlide) slides[i].classList.add('active');
                 else slides[i].classList.remove('active');
             }
+            counter.innerHTML = `${currentSlide + 1}/${slides.length}`;
         });
     }
 
