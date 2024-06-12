@@ -265,7 +265,7 @@ section {
 .slideShowContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     opacity: 0;
     animation: fade 1.25s forwards;
     animation-delay: 0.7s;
@@ -273,6 +273,8 @@ section {
 .slideShowControls {
     display: flex;
     flex-direction: row;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--primary-color);
 }
 .slideShowControls .slideShowButton {
     flex-grow: 1;
@@ -284,18 +286,16 @@ section {
 .slideShowControls .slideShowButton.next {
     margin-left: 0.25rem;
 }
-.slideShowControls .slideShowButton, .beforeAfterToggle {
+.slideShowControls .slideShowButton {
     padding: 0 1rem;
-    background-color: var(--secondary-color);
+    background-color: var(--neutral-color);
     border: none;
     border-radius: 0.25rem;
-    color: var(--light-text);
+    color: var(--dark-text);
     cursor: pointer;
 }
 .slideShowControls .slideShowButton:hover {
-    opacity: 0.7;
-    cursor: pointer;
-    color: var(--dark-text);
+    background-color: var(--box-shadow-color);
 }
 .slideShowControls .slideShowControlOptions {
     display: flex;
@@ -330,18 +330,21 @@ section {
     background-color: var(--neutral-color);
 }
 .slideShowImgContainer {
-    position: relative;
     overflow-y: scroll;
 }
-.beforeAfterToggle {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    opacity: 0.7;
+.slideShowContent .beforeAfterToggle {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.75rem;
     background-color: var(--secondary-color);
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--light-text);
     font-size: 1rem;
+    cursor: pointer;
+}
+.slideShowContent .beforeAfterToggle:hover {
+    opacity: 0.7;
 }
 
 .slideShowImgContainer .before {
@@ -520,11 +523,19 @@ section {
         margin-top: 1rem;
     }
 
+    .slideShowContainer {
+        margin-top: 1rem;
+    }
     .slideShowContent {
         max-height: 700px;
     }
     .slideShowContent .beforeAfterToggle {
+        width: 33%;
         padding: 1rem;
+        margin-top: 0.5rem;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 1.25rem;
     }
     .slideShowCaption {
         padding: 0.75rem;
