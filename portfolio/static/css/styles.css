@@ -382,6 +382,10 @@ section {
     background-image: url("../img/wh/home-01.png");
     background-position: center;
 }
+#spendingtracker {
+    background-image: url("../img/spending-tracker/dashboard-01.png");
+    background-position: center;
+}
 #staticsite {
     background-image: url("../img/static/code.png");
     background-position: center;
