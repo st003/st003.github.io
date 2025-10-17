@@ -1,0 +1,50 @@
+{% layout project %}
+
+{% block main %}
+    <section class="about">
+        <h2>Spending Tracker</h2>
+        <p>An Electron app for providing metrics for personal expenses. A user friendly import utility converts bank transaction data from a csv into charts for tracking monthly expenses by category and net spending over time.</p>
+        <h4>My Role</h4>
+        <p>Creator, Maintainer</p>
+        <h4>Technology</h4>
+        <p>TypeScript, Electron, React, Mui, Vite</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/spending-tracker" target="_blank">https://github.com/st003/spending-tracker</a></p>
+    </section>
+
+    <div class="slideShowContainer">
+        <div class="slideShowContentContainer">
+            <div class="slideShowContent active">
+                <div class="slideShowCaption">Dashboard displays net income and expense metrics</div>
+                <div class="slideShowImgContainer">
+                    <img src="{% path static/img/spending-tracker/dashboard-01.png %}" alt="get started">
+                </div>
+            </div>
+            <div class="slideShowContent">
+                <div class="slideShowCaption">New transaction data added via csv import</div>
+                <div class="slideShowImgContainer">
+                    <img src="{% path static/img/spending-tracker/importer-01.png %}" alt="english word">
+                </div>
+            </div>
+            <div class="slideShowContent">
+                <div class="slideShowCaption">Monthly expenses can be viewed in detail</div>
+                <div class="slideShowImgContainer">
+                    <img src="{% path static/img/spending-tracker/budget-01.png %}" alt="translation">
+                </div>
+            </div>
+        </div>
+        <div class="slideShowControls">
+            <button class="slideShowButton prev">&#10094;</button>
+            <div class="slideShowControlOptions">
+                <div class="slideShowCounter"></div>
+            </div>
+            <button class="slideShowButton next">&#10095;</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="{% path projects/wh/index.html %}">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="{% path projects/static/index.html %}">Next &#10095;</a>
+{% endblock %}
