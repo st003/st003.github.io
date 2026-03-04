@@ -158,12 +158,10 @@ section {
 }
 .homeTitle nav a:hover {
     color: var(--secondary-color);
-    text-decoration: underline;
 }
 
 #about, #tech, #projects {
     opacity: 0;
-    text-decoration: underline;
 }
 .about, .skills, .projects, .image img {
     opacity: 0;
