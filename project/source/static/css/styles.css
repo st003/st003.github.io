@@ -160,17 +160,17 @@ section {
     color: var(--secondary-color);
 }
 
-#about, #tech, #projects {
+#about, #tech, #projects, #certificates {
     opacity: 0;
 }
-.about, .skills, .projects, .image img {
+.about, .skills, .projects, .certificates, .image img {
     opacity: 0;
     background-color: var(--neutral-color);
 }
 .about p, .about ul {
     font-size: 1.15rem;
 }
-#about, .about, #tech, .skills, #projects, .projects, .image img {
+#about, .about, #tech, .skills, #projects, .projects, #certificates, .certificates, .image img {
     animation: fade 1.25s forwards;
 }
 #about, .about {
@@ -181,6 +181,9 @@ section {
 }
 #projects, .projects {
     animation-delay: 1.0s;
+}
+#certificates, .certificates {
+    animation-delay: 1.3s;
 }
 
 .skillsContainer {
@@ -245,6 +248,21 @@ section {
     text-align: center;
     font-size: 1.15rem;
     color: var(--light-text);
+}
+
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.certificates .course {
+    text-align: center;
+}
+
+.certificates .course h3 {
+    font-size: 1.25rem;
 }
 
 .image {
