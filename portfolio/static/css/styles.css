@@ -515,7 +515,6 @@ section {
     }
     .certificates {
         display: flex;
-        margin-bottom: 0.5rem;
     }
     .slideshowNav {
         transform: translate(50%, 125%);
