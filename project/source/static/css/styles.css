@@ -253,13 +253,14 @@ section {
 }
 
 .certificates {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
 .certificates .course {
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -511,6 +512,9 @@ section {
     .project {
         display: inline-block;
         width: 23rem;
+    }
+    .certificates {
+        display: flex;
     }
     .slideshowNav {
         transform: translate(50%, 125%);
