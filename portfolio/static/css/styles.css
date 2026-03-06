@@ -152,6 +152,8 @@ section {
     margin-top: 1rem;
 }
 .homeTitle nav a {
+    display: block;
+    margin-bottom: 0.5rem;
     padding: 0 0.5rem;
     color: var(--light-text);
     font-size: 1.25rem;
@@ -496,6 +498,8 @@ section {
         width: 33%;
     }
     .homeTitle nav a {
+        display: inline;
+         margin-bottom: 0;
         font-size: 1.5rem;
     }
     .about p, .about ul, .skills p {
