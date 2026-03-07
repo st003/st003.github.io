@@ -437,6 +437,10 @@ section {
     background-image: url("../img/vm/jack-vm-translator.png");
     background-position: center;
 }
+#compiler {
+    background-image: url("../img/compiler/jack-compiler.png");
+    background-position: center;
+}
 #ecom {
     background-image: url("../img/ecom/home-01.png");
     background-position: center;
