@@ -1,0 +1,24 @@
+{% layout project %}
+
+{% block main %}
+    <section class="about">
+        <h2>Jack VM Translator</h2>
+        <p>An implementation of the Jack VM Translator for Nand2Tetris Part 2 written in Python. This is an academic project.</p>
+        <h4>My Role</h4>
+        <p>Developer</p>
+        <h4>Technology</h4>
+        <p>Python</p>
+        <h4>Source Code</h4>
+        <p><a href="https://github.com/st003/nand2tetris/tree/main/projects/8/VMTranslator" target="_blank">https://github.com/st003/nand2tetris/tree/main/projects/8/VMTranslator</a></p>
+    </section>
+
+    <section class="image">
+        <img src="{% path static/img/vm/jack-vm-translator.png %}" alt="source code">
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <a href="{% path projects/assem/index.html %}">&#10094; Previous</a>
+    <span></span>
+    <a class="next" href="{% path projects/ecom/index.html %}">Next &#10095;</a>
+{% endblock %}
