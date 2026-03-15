@@ -289,7 +289,7 @@ section {
 .slideShowControls {
     display: flex;
     flex-direction: row;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
 }
 .slideShowControls .slideShowButton {
     flex-grow: 1;
@@ -328,7 +328,6 @@ section {
 }
 .slideShowContentContainer {
     flex-grow: 1;
-    margin-bottom: 0.5rem;
     text-align: center;
 }
 .slideShowContent {
