@@ -23,6 +23,7 @@ body {
 
 .contentContainer {
     flex-grow: 1;
+    background-color: var(--primary-color);
 }
 
 header {
@@ -165,20 +166,20 @@ section {
 #about, #tech, #projects, #certificates {
     opacity: 0;
 }
-.about, .skills, .projects, .certificates, .image img {
+.about, .skills, .projects, .certificates, .image {
     opacity: 0;
     background-color: var(--neutral-color);
 }
 .about p, .about ul {
     font-size: 1.15rem;
 }
-#about, .about, #tech, .skills, #projects, .projects, #certificates, .certificates, .image img {
+#about, .about, #tech, .skills, #projects, .projects, #certificates, .certificates, .image {
     animation: fade 1.25s forwards;
 }
 #about, .about {
     animation-delay: 0.35s;
 }
-#tech, .skills, .image img {
+#tech, .skills, .image {
     animation-delay: 0.7s;
 }
 #projects, .projects {
@@ -269,12 +270,7 @@ section {
 }
 
 .image {
-    position: relative;
-    margin-top: 0.75rem;
-    padding: 0;
-}
-.image:hover {
-    cursor: pointer;
+    background-color: var(--neutral-color);;
 }
 .image img {
     width: 100%;
