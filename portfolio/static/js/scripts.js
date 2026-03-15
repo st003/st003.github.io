@@ -5,7 +5,6 @@ const closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 
 const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>'
 
-
 function toggleBeforeAfter(element) {
 
     const imgs   = element.parentElement.getElementsByClassName('slideShowImgContainer')[0].getElementsByTagName('img');
@@ -34,8 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides     = document.getElementsByClassName('slideShowContent');
         const counter    = document.getElementsByClassName('slideShowCounter')[0];
 
-        counter.innerHTML = `1/${slides.length}`;
-
+        counter.innerHTML = `1 of ${slides.length}`;
 
         buttons[0].addEventListener('click', () => {
             currentSlide = (currentSlide > 0) ? (currentSlide - 1) : slides.length - 1;
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (i === currentSlide) slides[i].classList.add('active');
                 else slides[i].classList.remove('active');
             }
-            counter.innerHTML = `${currentSlide + 1}/${slides.length}`;
+            counter.innerHTML = `${currentSlide + 1} of ${slides.length}`;
         });
 
         buttons[1].addEventListener('click', () => {
@@ -52,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (i === currentSlide) slides[i].classList.add('active');
                 else slides[i].classList.remove('active');
             }
-            counter.innerHTML = `${currentSlide + 1}/${slides.length}`;
+            counter.innerHTML = `${currentSlide + 1} of ${slides.length}`;
         });
     }
 
