@@ -150,14 +150,14 @@ section {
 }
 
 .homeTitle nav {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 .homeTitle nav a {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     padding: 0 0.5rem;
     color: var(--light-text);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .homeTitle nav a:hover {
     color: var(--secondary-color);
@@ -500,8 +500,8 @@ section {
     }
     .homeTitle nav a {
         display: inline;
-         margin-bottom: 0;
-        font-size: 1.5rem;
+        margin-bottom: 0;
+        font-size: 1.75rem;
     }
     .about p, .about ul, .skills p {
         font-size: 1.25rem;
