@@ -5,6 +5,8 @@
     --box-shadow-color: #CCC;
     --dark-text: #222;
     --light-text: white;
+
+    --max-width: 1440px;
 }
 
 html {
@@ -13,9 +15,10 @@ html {
 }
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
     margin: 0;
+    background-color: var(--primary-color);
     font-family: Helvetica;
     color: var(--dark-text);
     line-height: 1.5;
@@ -23,7 +26,7 @@ body {
 
 .contentContainer {
     flex-grow: 1;
-    background-color: var(--primary-color);
+    max-width: var(--max-width);
 }
 
 header {
@@ -64,7 +67,8 @@ header .social-media a:active, header .title h1:hover {
 
 footer {
     display: flex;
-    padding: 1rem;
+    max-width: var(--max-width);
+    margin: 1rem;
     background-color: var(--primary-color);
 }
 footer a {
