@@ -274,6 +274,7 @@ section {
 }
 
 .image {
+    margin-top: 0.5rem;
     background-color: var(--neutral-color);;
 }
 .image img {
@@ -451,18 +452,23 @@ section {
  */
 
 /* small devices */
-@media (min-width: 576px) {
+@media (min-width: 576px) {}
+
+/* medium devices */
+@media (min-width: 768px) {
     header {
         display: flex;
+        padding: 1rem 1rem 0.5rem 1rem;
     }
     .title .titleName, .title .titleJob {
         display: inline;
     }
     .title .titleDivider {
         display: inline;
+        font-size: 2rem;
     }
-    .title .titleJob {
-        font-size: 1.5rem;
+    .title .titleName, .title .titleJob {
+        font-size: 1.75rem;
     }
     header .social-media {
         flex-grow: 1;
@@ -472,12 +478,8 @@ section {
     header .social-media a {
         margin-right: 0;
         margin-left: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
-}
-
-/* medium devices */
-@media (min-width: 768px) {
     h2 {
         font-size: 2.25rem;
     }
@@ -543,7 +545,6 @@ section {
     .image {
         margin-top: 1rem;
     }
-
     .slideShowContainer {
         margin-top: 1rem;
     }
