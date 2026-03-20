@@ -304,9 +304,6 @@ section {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
 }
-.slideShowImgContainer {
-    border: 1px solid var(--primary-color);
-}
 .slideShowContent .beforeAfterToggle {
     width: 100%;
     margin-top: 0.25rem;
@@ -321,15 +318,22 @@ section {
 .slideShowContent .beforeAfterToggle:hover {
     opacity: 0.7;
 }
-.slideShowImgContainer .before {
-    display: none;
+.slideShowImgContainer {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    max-height: 1080px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
 }
 .slideShowImgContainer img {
     display: block;
     width: 100%;
+    object-fit: cover;
 }
-.slideShowImgContainer img.mobile {
-    width: 100%;
+.slideShowImgContainer .before {
+    display: none;
 }
 .slideShowControls {
     display: flex;
