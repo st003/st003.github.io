@@ -17,14 +17,31 @@
             <div class="slideShowContent active">
                 <div class="slideShowCaption">Home Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/leo/home-01.png %}" alt="home page">
+                    <img
+                        src="{% path static/img/leo/home-01.png %}"
+                        alt="home page"
+                        onclick="document.getElementById('home-01').showModal();"
+                    >
                 </div>
+                <dialog id="home-01" class="slideShowModal">
+                    <img src="{% path static/img/leo/home-01.png %}" alt="home page">
+                    <button commandfor="home-01" command="close">Close</button>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Home Page (phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="{% path static/img/leo/home-02.png %}" alt="home page phone">
+                    <img
+                        class="mobile"
+                        src="{% path static/img/leo/home-02.png %}"
+                        alt="home page phone"
+                        onclick="document.getElementById('home-02').showModal();"
+                    >
                 </div>
+                <dialog id="home-02" class="slideShowModal">
+                    <img src="{% path static/img/leo/home-02.png %}" alt="home page phone">
+                    <button commandfor="home-02" command="close">Close</button>
+                </dialog>
             </div>
         </div>
         <div class="slideShowControls">

@@ -326,14 +326,34 @@ section {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border: 1px solid var(--primary-color);
+    text-align: center;
 }
 .slideShowImgContainer img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
+.slideShowImgContainer img:hover {
+    cursor: pointer;
+}
 .slideShowImgContainer .before {
     display: none;
+}
+.slideShowImgContainer img.mobile {
+    display: inline;
+    width: auto;
+    max-width: 100%;
+}
+.slideShowModal {
+    background-color: var(--neutral-color);
+    border: 0;
+}
+.slideShowModal::backdrop {
+    background-color: black;
+    opacity: 0.7;
+}
+.slideShowModal img {
+    width: 100%;
 }
 .slideShowControls {
     display: flex;
@@ -350,7 +370,7 @@ section {
 .slideShowControls .slideShowButton.next {
     margin-left: 0.25rem;
 }
-.slideShowControls .slideShowButton {
+.slideShowControls .slideShowButton, .slideShowModal button {
     padding: 0 1rem;
     background-color: var(--secondary-color);
     border: none;
@@ -358,7 +378,10 @@ section {
     color: var(--dark-text);
     cursor: pointer;
 }
-.slideShowControls .slideShowButton:hover {
+.slideShowModal button {
+    padding: 1rem;
+}
+.slideShowControls .slideShowButton:hover, .slideShowModal button:hover {
     background-color: var(--secondary-color);
     color: var(--light-text);
 }
