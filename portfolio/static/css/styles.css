@@ -354,7 +354,7 @@ section {
     opacity: 0.7;
 }
 .slideShowModal .modalImageContainer {
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-y: scroll;
 }
 .slideShowModal .modalImageContainer img {
@@ -559,6 +559,9 @@ section {
     }
     .certificates {
         display: flex;
+    }
+    .slideShowModal .modalImageContainer {
+        max-height: 80vh;
     }
 }
 

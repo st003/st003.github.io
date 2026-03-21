@@ -22,6 +22,15 @@ function toggleBeforeAfter(element) {
     }
 }
 
+function showModal(id) {
+    document.getElementById(id).showModal();
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+}
+function closeModal(id) {
+    document.getElementById(id).close();
+    document.getElementsByTagName('body')[0].style.overflow = 'auto';
+}
+
 /* EVENT LISTENERS */
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -20,7 +20,7 @@
                     <img
                         src="{% path static/img/leo/home-01.png %}"
                         alt="home page"
-                        onclick="document.getElementById('home-01').showModal();"
+                        onclick="showModal('home-01');"
                     >
                 </div>
                 <dialog id="home-01" class="slideShowModal">
@@ -28,7 +28,7 @@
                         <img src="{% path static/img/leo/home-01.png %}" alt="home page">
                     </div>
                     <div class="buttonContainer">
-                        <button onclick="document.getElementById('home-01').close();">Close</button>
+                        <button onclick="closeModal('home-01');">Close</button>
                     </div>
                 </dialog>
             </div>
@@ -39,7 +39,7 @@
                         class="mobile"
                         src="{% path static/img/leo/home-02.png %}"
                         alt="home page phone"
-                        onclick="document.getElementById('home-02').showModal();"
+                        onclick="showModal('home-02');"
                     >
                 </div>
                 <dialog id="home-02" class="slideShowModal">
@@ -47,7 +47,7 @@
                         <img src="{% path static/img/leo/home-02.png %}" alt="home page phone">
                     </div>
                     <div class="buttonContainer">
-                        <button onclick="document.getElementById('home-02').close();">Close</button>
+                        <button onclick="closeModal('home-02');">Close</button>
                     </div>
                 </dialog>
             </div>
