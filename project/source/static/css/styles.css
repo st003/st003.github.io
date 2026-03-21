@@ -353,17 +353,17 @@ section {
     background-color: black;
     opacity: 0.7;
 }
-.slideShowModal .modalImageContainer {
+.slideShowModal .slideShowModalImageContainer {
     max-height: 70vh;
     overflow-y: scroll;
 }
-.slideShowModal .modalImageContainer img {
+.slideShowModal .slideShowModalImageContainer img {
     width: 100%;
 }
-.slideShowModal .buttonContainer button {
+.slideShowModal .slideShowModalButtonContainer button {
     margin-top: 1rem;
 }
-.slideShowModal .buttonContainer button {
+.slideShowModal .slideShowModalButtonContainer button {
     width: 100%;
 }
 .slideShowControls {
@@ -560,7 +560,7 @@ section {
     .certificates {
         display: flex;
     }
-    .slideShowModal .modalImageContainer {
+    .slideShowModal .slideShowModalImageContainer {
         max-height: 80vh;
     }
 }
@@ -597,7 +597,7 @@ section {
         margin-left: auto;
         font-size: 1.25rem;
     }
-    .slideShowModal .buttonContainer button {
+    .slideShowModal .slideShowModalButtonContainer button {
         width: auto;
     }
     .slideShowCaption {
