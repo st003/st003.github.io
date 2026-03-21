@@ -353,11 +353,17 @@ section {
     background-color: black;
     opacity: 0.7;
 }
-.slideShowModal img {
+.slideShowModal .modalImageContainer {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+.slideShowModal .modalImageContainer img {
     width: 100%;
 }
-.slideShowModal button {
+.slideShowModal .buttonContainer button {
     margin-top: 1rem;
+}
+.slideShowModal .buttonContainer button {
     width: 100%;
 }
 .slideShowControls {
@@ -588,7 +594,7 @@ section {
         margin-left: auto;
         font-size: 1.25rem;
     }
-    .slideShowModal button {
+    .slideShowModal .buttonContainer button {
         width: auto;
     }
     .slideShowCaption {
