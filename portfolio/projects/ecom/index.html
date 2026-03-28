@@ -55,8 +55,21 @@
             <div class="slideShowContent">
                 <div class="slideShowCaption">Browse available software subscriptions (Phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="../../static/img/ecom/home-02.png" alt="home page phone">
+                    <img
+                        class="mobile"
+                        src="../../static/img/ecom/home-02.png"
+                        alt="home page phone"
+                        onclick="showModal('home-02');"
+                    >
                 </div>
+                <dialog id="home-02" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="../../static/img/ecom/home-02.png" alt="home page phone">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('home-02');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">New customers register for an account</div>
@@ -73,8 +86,21 @@
             <div class="slideShowContent">
                 <div class="slideShowCaption">Add subscriptions to your cart (Phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="../../static/img/ecom/shop-02.png" alt="shop phone">
+                    <img
+                        class="mobile"
+                        src="../../static/img/ecom/shop-02.png"
+                        alt="shop phone"
+                        onclick="showModal('shop-02');"
+                    >
                 </div>
+                <dialog id="shop-02" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="../../static/img/ecom/shop-02.png" alt="shop phone">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('shop-02');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">See more details on the subscriptions for sale</div>
@@ -84,9 +110,25 @@
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">See more details on the subscriptions for sale (Phone)</div>
-                <div class="slideShowImgContainer">
+                <!-- <div class="slideShowImgContainer">
                     <img class="mobile" src="../../static/img/ecom/item-02.png" alt="item page phone">
+                </div> -->
+                <div class="slideShowImgContainer">
+                    <img
+                        class="mobile"
+                        src="../../static/img/ecom/item-02.png"
+                        alt="tem page phone"
+                        onclick="showModal('item-02');"
+                    >
                 </div>
+                <dialog id="item-02" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="../../static/img/ecom/item-02.png" alt="tem page phone">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('item-02');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Add subscriptions to your cart</div>
@@ -130,7 +172,7 @@
                     <img src="../../static/img/ecom/reports-01.png" alt="reporting">
                 </div>
             </div>
-            <div class="slideShowContent">
+            <!-- <div class="slideShowContent">
                 <div class="slideShowCaption">Additionally, the Django admin is available...</div>
                 <div class="slideShowImgContainer">
                     <img src="../../static/img/ecom/admin-01.png" alt="django admin 1">
@@ -141,7 +183,7 @@
                 <div class="slideShowImgContainer">
                     <img src="../../static/img/ecom/admin-02.png" alt="django admin 2">
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="slideShowControls">
             <button class="slideShowButton prev">&#10094;</button>
