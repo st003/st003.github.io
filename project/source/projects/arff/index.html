@@ -17,20 +17,76 @@
             <div class="slideShowContent active">
                 <div class="slideShowCaption">Home Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/arff/arff-index-01.png %}" alt="home page">
+                    <img
+                        src="{% path static/img/arff/arff-index-01.png %}"
+                        alt="home page"
+                        onclick="showModal('arff-index-01');"
+                    >
                 </div>
+                <dialog id="arff-index-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/arff/arff-index-01.png %}" alt="home page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('arff-index-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Home Page (phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="{% path static/img/arff/arff-index-02.png %}" alt="home page phone">
+                    <img
+                        class="mobile"
+                        src="{% path static/img/arff/arff-index-02.png %}"
+                        alt="Home Page (phone)"
+                        onclick="showModal('arff-index-02');"
+                    >
                 </div>
+                <dialog id="arff-index-02" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/arff/arff-index-02.png %}" alt="Home Page (phone)">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('arff-index-02');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Pricing Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/arff/arff-pricing-01.png %}" alt="pricing page">
+                    <img
+                        src="{% path static/img/arff/arff-pricing-01.png %}"
+                        alt="Pricing Page"
+                        onclick="showModal('arff-pricing-01');"
+                    >
                 </div>
+                <dialog id="arff-pricing-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/arff/arff-pricing-01.png %}" alt="Pricing Page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('arff-pricing-01');">Close</button>
+                    </div>
+                </dialog>
+            </div>
+            <div class="slideShowContent">
+                <div class="slideShowCaption">Pricing Page (phone)</div>
+                <div class="slideShowImgContainer">
+                    <img
+                        class="mobile"
+                        src="{% path static/img/arff/arff-pricing-02.png %}"
+                        alt="Pricing Page (phone)"
+                        onclick="showModal('arff-pricing-02');"
+                    >
+                </div>
+                <dialog id="arff-pricing-02" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/arff/arff-pricing-02.png %}" alt="Pricing Page (phone)">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('arff-pricing-02');">Close</button>
+                    </div>
+                </dialog>
             </div>
         </div>
         <div class="slideShowControls">
