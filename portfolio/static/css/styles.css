@@ -386,7 +386,7 @@ section {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 0.25rem;
-    color: var(--dark-text);
+    color: var(--light-text);
     cursor: pointer;
 }
 .slideShowModal button {
@@ -394,7 +394,7 @@ section {
 }
 .slideShowControls .slideShowButton:hover, .slideShowModal button:hover {
     background-color: var(--secondary-color);
-    color: var(--light-text);
+    color: var(--dark-text);
 }
 .slideShowControls .slideShowControlOptions {
     display: flex;
