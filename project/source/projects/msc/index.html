@@ -17,26 +17,76 @@
             <div class="slideShowContent active">
                 <div class="slideShowCaption">Home Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/msc/home-01.png %}" alt="home page">
+                    <img
+                        src="{% path static/img/msc/home-01.png %}"
+                        alt="home page"
+                        onclick="showModal('home-01');"
+                    >
                 </div>
+                <dialog id="home-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/msc/home-01.png %}" alt="home page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('home-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Home Page (phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="{% path static/img/msc/home-01m.png %}" alt="home page">
+                    <img
+                        class="mobile"
+                        src="{% path static/img/msc/home-01m.png %}"
+                        alt="home page phone"
+                        onclick="showModal('home-01m');"
+                    >
                 </div>
+                <dialog id="home-01m" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/msc/home-01m.png %}" alt="home page phone">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('home-01m');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Pricing Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/msc/price-01.png %}" alt="pricing page">
+                    <img
+                        src="{% path static/img/msc/price-01.png %}"
+                        alt="Pricing page"
+                        onclick="showModal('price-01');"
+                    >
                 </div>
+                <dialog id="price-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/msc/price-01.png %}" alt="Pricing page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('price-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Pricing Page (Phone)</div>
                 <div class="slideShowImgContainer">
-                    <img class="mobile" src="{% path static/img/msc/price-01m.png %}" alt="pricing page">
+                    <img
+                        class="mobile"
+                        src="{% path static/img/msc/price-01m.png %}"
+                        alt="pricing page phone"
+                        onclick="showModal('price-01m');"
+                    >
                 </div>
+                <dialog id="price-01m" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/msc/price-01m.png %}" alt="pricing page phone">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('price-01m');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Product Page</div>
@@ -47,8 +97,20 @@
             <div class="slideShowContent">
                 <div class="slideShowCaption">Blog Page</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/msc/blog-01.png %}" alt="blog page">
+                    <img
+                        src="{% path static/img/msc/blog-01.png %}"
+                        alt="blog page"
+                        onclick="showModal('blog-01');"
+                    >
                 </div>
+                <dialog id="blog-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/msc/blog-01.png %}" alt="blog page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('blog-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
         </div>
         <div class="slideShowControls">
