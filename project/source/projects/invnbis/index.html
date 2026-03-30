@@ -55,8 +55,20 @@
             <div class="slideShowContent">
                 <div class="slideShowCaption">Graphical reporting provides and overview of categories and billing</div>
                 <div class="slideShowImgContainer">
-                    <img src="{% path static/img/invnbis/reports-01.png %}" alt="reporting">
+                    <img
+                        src="{% path static/img/invnbis/reports-01.png %}"
+                        alt="reporting"
+                        onclick="showModal('reports-01');"
+                    >
                 </div>
+                <dialog id="reports-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="{% path static/img/invnbis/reports-01.png %}" alt="reporting">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('reports-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Setup configs, batch tools, and logs are available from the GUI</div>
