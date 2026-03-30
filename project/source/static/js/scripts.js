@@ -7,7 +7,7 @@ const forwardSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="1
 
 function toggleBeforeAfter(element) {
 
-    const imgs   = element.parentElement.getElementsByClassName('slideShowImgContainer')[0].getElementsByTagName('img');
+    const imgs   = element.parentElement.parentElement.getElementsByClassName('slideShowImgContainer')[0].getElementsByTagName('img');
     const before = imgs.item(0);
     const after  = imgs.item(1);
 

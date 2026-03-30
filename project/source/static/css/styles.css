@@ -304,6 +304,11 @@ section {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
 }
+.beforeAfterToggleContainer {
+    display: flex;
+    height: 55px;
+    align-content: center;
+}
 .slideShowContent .beforeAfterToggle {
     width: 100%;
     margin-top: 0.25rem;

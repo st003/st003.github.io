@@ -31,13 +31,16 @@
                     <img class="before" src="{% path static/img/olp/login-01b.png %}" alt="old login page">
                     <img class="after" src="{% path static/img/olp/login-01a.png %}" alt="redesigned login page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Shopping cart for business to customer transactions</div>
                 <div class="slideShowImgContainer">
                     <img src="{% path static/img/olp/shopping-cart-01.png %}" alt="shopping cart page">
                 </div>
+                <div class="beforeAfterToggleContainer"></div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">The training catalog can be customized per user</div>
@@ -45,13 +48,12 @@
                     <img class="before" src="{% path static/img/olp/my-courses-01b.png %}" alt="old my courses page">
                     <img class="after" src="{% path static/img/olp/my-courses-01a.png %}" alt="redesigned my courses page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Mobile support</div>
-                <!-- <div class="slideShowImgContainer">
-                    <img class="mobile" src="{% path static/img/olp/my-courses-02.png %}" alt="my courses page phone">
-                </div> -->
                 <div class="slideShowImgContainer">
                     <img
                         class="mobile"
@@ -60,6 +62,7 @@
                         onclick="showModal('my-courses-02');"
                     >
                 </div>
+                <div class="beforeAfterToggleContainer"></div>
                 <dialog id="my-courses-02" class="slideShowModal">
                     <div class="slideShowModalImageContainer">
                         <img src="{% path static/img/olp/my-courses-02.png %}" alt="my courses page phone">
@@ -74,6 +77,7 @@
                 <div class="slideShowImgContainer">
                     <img src="{% path static/img/olp/dashboard-01.png %}" alt="dashboard page">
                 </div>
+                <div class="beforeAfterToggleContainer"></div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Reporting for managers and administrators</div>
@@ -81,13 +85,16 @@
                     <img class="before" src="{% path static/img/olp/records-01b.png %}" alt="old reports page">
                     <img class="after" src="{% path static/img/olp/records-01a.png %}" alt="redesigned reports page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Redesigned GUI for report filters</div>
                 <div class="slideShowImgContainer">
                     <img src="{% path static/img/olp/records-02.png %}" alt="reports filters">
                 </div>
+                <div class="beforeAfterToggleContainer"></div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Support for user profile management</div>
@@ -95,13 +102,16 @@
                     <img class="before" src="{% path static/img/olp/new-user-01b.png %}" alt="old new user page">
                     <img class="after" src="{% path static/img/olp/new-user-01a.png %}" alt="redesigned new user page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Administrators can upload new course content...</div>
                 <div class="slideShowImgContainer">
                     <img src="{% path static/img/olp/course-file-upload-01.png %}" alt="course file upload page">
                 </div>
+                <div class="beforeAfterToggleContainer"></div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">Customize course configurations...</div>
@@ -109,7 +119,9 @@
                     <img class="before" src="{% path static/img/olp/new-course-01b.png %}" alt="old new course page">
                     <img class="after" src="{% path static/img/olp/new-course-01a.png %}" alt="redesigned new course page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">And global system configurations</div>
@@ -117,7 +129,9 @@
                     <img class="before" src="{% path static/img/olp/system-management-01b.png %}" alt="old system management page">
                     <img class="after" src="{% path static/img/olp/system-management-01a.png %}" alt="redesigned system management page">
                 </div>
-                <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                <div class="beforeAfterToggleContainer">
+                    <button class="beforeAfterToggle" onclick="toggleBeforeAfter(this)">Show Before</button>
+                </div>
             </div>
         </div>
         <div class="slideShowControls">
