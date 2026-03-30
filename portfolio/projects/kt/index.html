@@ -103,8 +103,20 @@
             <div class="slideShowContent">
                 <div class="slideShowCaption">Analytics are comprehensive down to the question</div>
                 <div class="slideShowImgContainer">
-                    <img src="../../static/img/kt/analytics-01.png" alt="analytics page">
+                    <img
+                        src="../../static/img/kt/analytics-01.png"
+                        alt="analytics page"
+                        onclick="showModal('analytics-01');"
+                    >
                 </div>
+                <dialog id="analytics-01" class="slideShowModal">
+                    <div class="slideShowModalImageContainer">
+                        <img src="../../static/img/kt/analytics-01.png" alt="analytics page">
+                    </div>
+                    <div class="slideShowModalButtonContainer">
+                        <button onclick="closeModal('analytics-01');">Close</button>
+                    </div>
+                </dialog>
             </div>
             <div class="slideShowContent">
                 <div class="slideShowCaption">New games can be created and deployed quickly</div>
